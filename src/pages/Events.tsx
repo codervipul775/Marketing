@@ -5,15 +5,15 @@ interface Event {
   id: number;
   title: string;
   date: string;
-  time: string;
   location: string;
   category: string;
   attendees: number;
   description: string;
   image: string;
   longDescription?: string;
-  speakers?: string[];
+  Guests?: string[];
   agenda?: string[];
+  highlights?: string[];
 }
 
 const Modal = ({ isOpen, onClose, children }: { isOpen: boolean; onClose: () => void; children: React.ReactNode }) => {
@@ -46,92 +46,84 @@ const Events = () => {
   const events: Event[] = [
     {
       id: 1,
-      title: "Digital Marketing Summit 2025",
-      date: "March 15, 2025",
-      time: "10:00 AM - 5:00 PM",
-      location: "Tech Hub, Silicon Valley",
-      category: "Conference",
-      attendees: 500,
+      title: "SRCC Business Conclave – Asia’s Largest Undergraduate Management Fest",
+      date: "April 2025",
+      location: "SRCC Campus, New Delhi",
+      category: "Business Conclave",
+      attendees: 50000,
       description: "Join industry leaders for a day of insights into the latest digital marketing trends and strategies.",
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800",
-      longDescription: "The Digital Marketing Summit 2025 brings together the brightest minds in digital marketing for a day of learning, networking, and inspiration. Discover cutting-edge strategies, hear from industry pioneers, and stay ahead of the curve in the ever-evolving digital landscape.",
-      speakers: [
-        "Sarah Johnson - CEO, Digital First",
-        "Mike Zhang - Head of Growth, TechGiant",
-        "Lisa Patel - Social Media Strategist"
+      image: "https://www.indiafilings.com/learn/wp-content/uploads/2019/05/Global-Entrepreneurship-Summit.jpg",
+      longDescription: "The SRCC Business Conclave is a premier platform that brings together global business icons, policymakers, and industry leaders to discuss emerging trends, economic insights, and the future of business. As Asia’s largest undergraduate management fest, it has built a reputation for hosting visionary leaders and changemakers, attracting thousands of attendees and generating millions of digital impressions. ",
+      Guests: [
+        "Nitin Gadkari – Union Minister for Road Transport and Highways, sharing insights on India’s infrastructure and economic development.",
+        "Naveen Jindal – Industrialist and philanthropist, speaking on leadership, innovation, and sustainability. ",
+        "Swami Mukundananda – Spiritual leader, discussing the intersection of business, ethics, and personal development. ",
+        "Aman Dhattarwal & Shradha Khapra – Visionary entrepreneurs and educators, engaging in discussions on innovation and career growth.",
+        "Raj Shamani – Digital content creator and entrepreneur, sharing insights on personal branding and business scaling.",
+        "Kiran Bedi – India’s first female IPS officer, addressing leadership and governance in modern India. ",
+        "Sundararaman Ramamurthy – MD & CEO of BSE, offering expert analysis on financial markets and global economic trends. ",
+        "Ankur Warikoo – Entrepreneur and author, delivering actionable insights on business, productivity, and digital influence. "
+  
       ],
-      agenda: [
-        "10:00 AM - Opening Keynote: The Future of Digital Marketing",
-        "11:30 AM - Panel Discussion: AI in Marketing",
-        "2:00 PM - Workshop: Data-Driven Decision Making",
-        "4:00 PM - Closing Session: Implementation Strategies"
+      highlights: [
+        "With a massive digital reach and a strong industry presence, the SRCC Business Conclave continues to shape conversations that influence the future of business and policy, making it a must-attend event for aspiring professionals and corporate leaders alike."
+
       ]
+      
     },
     {
       id: 2,
-      title: "Influencer Marketing Workshop",
-      date: "March 20, 2025",
-      time: "2:00 PM - 4:00 PM",
-      location: "Virtual Event",
-      category: "Workshop",
-      attendees: 200,
+      title: "Crossroads – SRCC's Annual Cultural Extravaganza ",
+      date: "March 2025",
+      location: "SRCC Campus, New Delhi",
+      category: "Cultural",
+      attendees: 50000,
       description: "Learn how to create and execute successful influencer marketing campaigns.",
-      image: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800",
+      image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       longDescription: "Master the art of influencer marketing in this intensive workshop. Learn how to identify the right influencers, create compelling campaigns, and measure success. Perfect for marketing professionals looking to enhance their influencer marketing strategies.",
-      speakers: [
-        "Alex Rivera - Influencer Marketing Expert",
-        "Emma Chen - Brand Partnerships Lead"
+      Guests: [
+        "Arijit Singh: The acclaimed playback singer captivated audiences with his soulful melodies, creating an unforgettable musical experience. ",
+        "Sunidhi Chauhan: Known for her powerful vocals and dynamic stage presence, Sunidhi delivered an electrifying performance that left the crowd enthralled. ",
+        "Salim–Sulaiman: The renowned composer duo brought their unique fusion of traditional and contemporary music to the stage, engaging the audience with their innovative compositions. ",
+        "Shankar–Ehsaan–Loy: This iconic trio showcased their musical versatility, delivering a performance that resonated with attendees of all ages. ",
+        "Farhan Akhtar: The multi-talented artist entertained the crowd with his energetic performance, blending rock music with his charismatic persona. ",
+        "Papon: The folk-fusion singer added a unique flavor to the festival with his soulful renditions and engaging stage presence. ",
+
       ],
-      agenda: [
-        "2:00 PM - Influencer Selection Strategies",
-        "2:45 PM - Campaign Planning & Execution",
-        "3:30 PM - Analytics & ROI Measurement"
+      highlights: [
+        "Diverse Attractions: Beyond stellar performances, Crossroads offers a plethora of activities, including engaging competitions, vibrant stalls, and a lively fun zone, ensuring a holistic festive experience for all attendees.",
+        "Massive Attendance: The festival attracts a large number of attendees each year, reflecting its popularity and significance in the cultural landscape. "
+
       ]
+      
     },
     {
       id: 3,
-      title: "Content Creation Masterclass",
-      date: "April 5, 2025",
-      time: "11:00 AM - 3:00 PM",
-      location: "Creative Studio, Downtown",
-      category: "Workshop",
-      attendees: 100,
+      title: "Histrionica – SRCC's Annual Theatre Festival ",
+      date: "2025",
+      location: "SRCC Campus, New Delhi",
+      category: "Theatre",
+      attendees: 50000,
       description: "Master the art of creating engaging content for multiple platforms.",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800",
-      longDescription: "Elevate your content creation skills in this hands-on masterclass. Learn advanced techniques for creating compelling content across different platforms, understanding audience engagement, and developing a consistent brand voice.",
-      speakers: [
-        "David Lee - Content Director",
-        "Rachel Smith - Creative Strategist"
+      image: "https://images.unsplash.com/photo-1477281765962-ef34e8bb0967?q=80&w=3133&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      longDescription: "Histrionica is the esteemed annual theatre festival of Shri Ram College of Commerce (SRCC), celebrated for its rich tradition of theatrical excellence and cultural significance. Over the years, the festival has served as a vibrant platform for thespians and artists, drawing attention from theatre enthusiasts nationwide",
+      Guests: [
+        "Farhan Akhtar – Renowned actor and filmmaker, who interacted with students, sharing insights into the art of storytelling.",
+        "Vidya Balan – Celebrated actress known for her versatile roles, who engaged in discussions about the evolving landscape of Indian cinema.",
+        "Randeep Hooda – Acclaimed actor, who participated in interactive sessions, offering perspectives on method acting and character development.",
+        "Rajkummar Rao – Versatile actor, who shared his journey in the film industry, inspiring budding actors",
+        "Vinay Pathak – Noted actor and theatre artist, who conducted workshops, enriching the theatrical experience for participants.",
+        "Adil Hussain – Esteemed actor, who engaged with students, discussing the nuances of theatre and cinema.",
+        "Piyush Mishra – Renowned actor, singer, and lyricist, who captivated audiences with his multifaceted talents.",
+        "Manoj Bajpayee – Critically acclaimed actor, who shared his experiences and insights into the craft of acting."
       ],
-      agenda: [
-        "11:00 AM - Content Strategy Fundamentals",
-        "12:30 PM - Platform-Specific Best Practices",
-        "2:00 PM - Hands-on Content Creation Workshop"
+      highlights: [
+        "Diverse Performances: The festival showcases a wide array of theatrical productions, from classic plays to contemporary performances, providing a platform for emerging talent and established artists alike.",
+        "Workshops and Interactive Sessions: Histrionica offers workshops conducted by industry experts, fostering skill development and offering deeper insights into various aspects of theatre, including direction, scriptwriting, and production. "
       ]
+      
     },
-    {
-      id: 4,
-      title: "Marketing Analytics Conference",
-      date: "April 15, 2025",
-      time: "9:00 AM - 6:00 PM",
-      location: "Grand Hotel Conference Center",
-      category: "Conference",
-      attendees: 300,
-      description: "Deep dive into data-driven marketing strategies and analytics tools.",
-      image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800",
-      longDescription: "Join us for a comprehensive exploration of marketing analytics. Learn how to leverage data to drive marketing decisions, optimize campaigns, and demonstrate ROI. Features hands-on sessions with popular analytics tools and expert-led discussions.",
-      speakers: [
-        "Tom Wilson - Analytics Director",
-        "Maria Garcia - Data Science Lead",
-        "James Kim - Marketing Operations Manager"
-      ],
-      agenda: [
-        "9:00 AM - Analytics Tools Overview",
-        "11:00 AM - Data Visualization Techniques",
-        "2:00 PM - Predictive Analytics Workshop",
-        "4:30 PM - ROI Measurement Strategies"
-      ]
-    }
+    
   ];
 
   return (
@@ -140,7 +132,7 @@ const Events = () => {
       <section className="relative py-20 overflow-hidden">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-center bg-gradient-to-r from-white to-indigo-300 text-transparent bg-clip-text">
-            Upcoming Events
+            Our Events
           </h1>
           <p className="text-gray-400 text-lg md:text-xl text-center mb-12 max-w-2xl mx-auto">
             Join us for exciting marketing events, workshops, and conferences
@@ -191,10 +183,6 @@ const Events = () => {
 
                     <div className="mt-6 space-y-3">
                       <div className={`flex items-center gap-3 text-slate-400 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
-                        <Clock className="w-4 h-4 text-indigo-400 flex-shrink-0" />
-                        <span>{event.time}</span>
-                      </div>
-                      <div className={`flex items-center gap-3 text-slate-400 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                         <MapPin className="w-4 h-4 text-indigo-400 flex-shrink-0" />
                         <span>{event.location}</span>
                       </div>
@@ -210,7 +198,7 @@ const Events = () => {
                         className="bg-slate-700/50 text-white py-3 px-6 rounded-xl hover:bg-slate-700 transition-colors flex items-center gap-2"
                       >
                         <LinkIcon className="w-4 h-4" />
-                        Learn More
+                        Explore More
                       </button>
                     </div>
                   </div>
@@ -248,10 +236,6 @@ const Events = () => {
                 <span>{selectedEvent.date}</span>
               </div>
               <div className="flex items-center gap-3 text-gray-400">
-                <Clock className="w-5 h-5 text-indigo-400 flex-shrink-0" />
-                <span>{selectedEvent.time}</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-400">
                 <MapPin className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                 <span>{selectedEvent.location}</span>
               </div>
@@ -269,17 +253,32 @@ const Events = () => {
                 </p>
               </div>
 
-              {selectedEvent.speakers && (
+              {selectedEvent.Guests && (
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Speakers</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">Guests</h3>
                   <ul className="space-y-2">
-                    {selectedEvent.speakers.map((speaker, index) => (
+                    {selectedEvent.Guests.map((speaker, index) => (
                       <li key={index} className="text-gray-400">
                         • {speaker}
                       </li>
                     ))}
                   </ul>
                 </div>
+                
+              )}
+
+              {selectedEvent.highlights && (
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Highlights</h3>
+                  <ul className="space-y-2">
+                    {selectedEvent.highlights.map((speaker, index) => (
+                      <li key={index} className="text-gray-400">
+                        • {speaker}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
               )}
 
               {selectedEvent.agenda && (

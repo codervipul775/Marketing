@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, BrainCircuit, Pencil, Users, BarChart3, X } from 'lucide-react';
+import CollaboratorCarousel from '../components/CollaboratorCarousel';
 
 const Modal = ({ isOpen, onClose, children }: { isOpen: boolean; onClose: () => void; children: React.ReactNode }) => {
   if (!isOpen) return null;
@@ -65,6 +66,14 @@ const FeatureCard = ({ feature, index }: { feature: any; index: number }) => {
             <p className="text-gray-300 leading-relaxed">
               {feature.description}
             </p>
+            <h3 className="text-xl font-semibold text-white mb-2">
+              {feature.keypoint_title}
+            </h3>
+            <ul className="text-gray-300 leading-relaxed list-disc list-inside">
+              {feature.keypoint.split('\n').map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </Modal>
@@ -77,35 +86,45 @@ const Home = () => {
     {
       icon: <BrainCircuit className="w-8 h-8 text-indigo-400" />,
       title: "Influencer Marketing",
-      miniDescription: "Strategic influencer partnerships for maximum impact.",
-      description: "Our comprehensive influencer marketing solutions help brands connect with their target audience through authentic partnerships. We handle everything from influencer selection to campaign execution and performance tracking."
+      miniDescription: "We connect brands with influencers to create impactful and engaging campaigns.",
+      description: "We connect brands with the right influencers across Instagram, YouTube, and LinkedIn to create high-impact campaigns. Whether you're looking for macro-influencers or niche micro-influencers, we ensure authentic brand collaborations that engage audiences and drive conversions.",
+      keypoint_title: "What We Offer:",
+      keypoint: "Influencer sourcing & outreach \n Campaign strategy & execution."
     },
     {
       icon: <Pencil className="w-8 h-8 text-indigo-400" />,
       title: "Content Creation",
-      miniDescription: "Engaging content that tells your brand story.",
-      description: "From compelling visuals to engaging copy, our content creation team crafts high-quality materials that resonate with your audience and drive engagement across all platforms."
+      miniDescription: "We create engaging visuals, videos, and copy to captivate your audience.",
+      description: "In today’s digital world, engaging content is the key to capturing attention and building brand loyalty. At Influenz, we create high-impact visuals, compelling videos, and persuasive copy that not only tell your story but also drive meaningful engagement.",
+      keypoint_title: "What We Offer:", 
+      keypoint: "Social media creatives & viral-worthy videos \n SEO-optimised blogs & website content \n Authentic brand storytelling that connects"
     },
     {
       icon: <Users className="w-8 h-8 text-indigo-400" />,
-      title: "Influencer Matching",
-      miniDescription: "Perfect influencer-brand partnerships.",
-      description: "Our advanced matching system ensures your brand connects with influencers who share your values and can authentically represent your products to their engaged audience."
+      title: "PR Articles",
+      miniDescription: "We craft and publish PR articles to build credibility and authority.",
+      description: "We help businesses build credibility through well-crafted PR articles published on reputed platforms. Our team writes engaging press releases and thought-leadership articles that strengthen brand authority.",
+      keypoint_title: "What We Offer:", 
+      keypoint: "PR strategy & planning \n Article writing & publishing \n Media outreach & brand positioning"
     }
   ];
 
   const secondRowFeatures = [
     {
       icon: <ArrowRight className="w-8 h-8 text-indigo-400" />,
-      title: "Campaign Management",
-      miniDescription: "End-to-end campaign execution and monitoring.",
-      description: "We handle every aspect of your campaign from planning to execution, ensuring smooth delivery and maximum impact while keeping you informed every step of the way."
+      title: "Ads (Performance Marketing)",
+      miniDescription: "We run data-driven ad campaigns to maximize reach and conversions.",
+      description: "Our data-driven advertising strategies ensure your brand reaches the right audience with maximum ROI. From Google Ads to Facebook and Instagram promotions, we run high-converting ad campaigns.",
+      keypoint_title: "What We Offer:", 
+      keypoint: "Targeted digital ad campaigns \n Budget optimization \n Conversion rate tracking"
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-indigo-400" />,
-      title: "Analytics & Reporting",
-      miniDescription: "Data-driven insights for campaign optimization.",
-      description: "Our comprehensive analytics and reporting system provides real-time insights into campaign performance, helping you understand ROI and optimize future campaigns for better results."
+      title: "Strategy Consulting",
+      miniDescription: "We provide expert marketing strategies to help brands grow and scale.",
+      description: "We provide end-to-end marketing consultancy, crafting tailored strategies to help brands scale efficiently. From branding to social media growth, our expert insights give you a competitive edge.",
+      keypoint_title: "What We Offer:", 
+      keypoint: "Market research & competitor analysis \n Brand positioning & GTM strategy \n Digital growth planning"
     }
   ];
 
@@ -165,6 +184,8 @@ const Home = () => {
         </div>
       </section>
 
+      
+
       {/* CTA Section */}
       <section className="w-screen bg-gradient-to-b from-slate-800 to-slate-900 py-20">
         <div className="container mx-auto px-4">
@@ -180,10 +201,10 @@ const Home = () => {
                     <div className="p-2 rounded-lg bg-white/20 group-hover:bg-white/30 transition-colors">
                       <Users className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white group-hover:text-indigo-200 transition-colors">Expert Team</h3>
+                    <h3 className="text-xl font-semibold text-white group-hover:text-indigo-200 transition-colors">Young & Dynamic Minds</h3>
                   </div>
                   <p className="text-indigo-100 group-hover:text-white transition-colors">
-                    Our team of marketing specialists brings years of experience in digital marketing and influencer partnerships.
+                    As SRCC students, we bring fresh, innovative ideas that stand out in today’s fast-changing market.
                   </p>
                 </div>
                 
@@ -192,10 +213,10 @@ const Home = () => {
                     <div className="p-2 rounded-lg bg-white/20 group-hover:bg-white/30 transition-colors">
                       <BarChart3 className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white group-hover:text-indigo-200 transition-colors">Data-Driven</h3>
+                    <h3 className="text-xl font-semibold text-white group-hover:text-indigo-200 transition-colors">Data-Driven Approach</h3>
                   </div>
                   <p className="text-indigo-100 group-hover:text-white transition-colors">
-                    Make informed decisions with our comprehensive analytics and performance tracking systems.
+                    Every decision we make is backed by analytics to ensure the highest ROI.
                   </p>
                 </div>
                 
@@ -204,10 +225,10 @@ const Home = () => {
                     <div className="p-2 rounded-lg bg-white/20 group-hover:bg-white/30 transition-colors">
                       <BrainCircuit className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white group-hover:text-indigo-200 transition-colors">Strategic Approach</h3>
+                    <h3 className="text-xl font-semibold text-white group-hover:text-indigo-200 transition-colors">Strong Network & Industry Insights</h3>
                   </div>
                   <p className="text-indigo-100 group-hover:text-white transition-colors">
-                    We develop tailored strategies that align with your brand values and business objectives.
+                    We leverage our extensive connections to create impactful marketing campaigns.
                   </p>
                 </div>
                 
@@ -216,10 +237,22 @@ const Home = () => {
                     <div className="p-2 rounded-lg bg-white/20 group-hover:bg-white/30 transition-colors">
                       <ArrowRight className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white group-hover:text-indigo-200 transition-colors">End-to-End Service</h3>
+                    <h3 className="text-xl font-semibold text-white group-hover:text-indigo-200 transition-colors">Customized Strategies</h3>
                   </div>
                   <p className="text-indigo-100 group-hover:text-white transition-colors">
-                    From planning to execution and reporting, we handle every aspect of your marketing campaigns.
+                    We tailor every campaign to fit your brand’s unique needs and target audience.
+                  </p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 transition-all duration-300 hover:bg-white/20 hover:scale-105 hover:shadow-xl group cursor-pointer md:col-span-2 md:mx-auto">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 rounded-lg bg-white/20 group-hover:bg-white/30 transition-colors">
+                      <ArrowRight className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white group-hover:text-indigo-200 transition-colors">Cost-Effective Solutions</h3>
+                  </div>
+                  <p className="text-indigo-100 group-hover:text-white transition-colors">
+                    Get top-notch marketing services at a competitive price, without compromising on quality.
                   </p>
                 </div>
               </div>
@@ -231,6 +264,16 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Collaborator Carousel */}
+      <section className="w-screen bg-gradient-to-b from-slate-800 to-slate-900 py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-white">
+            Our Collaborators
+          </h2>
+          <CollaboratorCarousel />
         </div>
       </section>
     </div>
