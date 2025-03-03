@@ -1,0 +1,28 @@
+import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import Events from './pages/Events'
+
+export default function App() {
+  const footerLinks = [
+    { name: 'Privacy Policy', url: '#' },
+    { name: 'Terms of Service', url: '#' },
+  ];
+
+  return (
+    <Router>
+      <div className="flex flex-col min-h-screen w-screen overflow-x-hidden">
+        <Navbar />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/events" element={<Events />} />
+          </Routes>
+        </main>
+        <Footer copyright=" 2025 My Project" links={footerLinks} />
+      </div>
+    </Router>
+  )
+}
