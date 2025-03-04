@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code2, Users, Trophy, Home, UserPlus, FolderGit2 } from 'lucide-react';
+import { Code2, Users, Trophy, Home, UserPlus, FolderGit2, Mail } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface NavLinkProps {
@@ -33,6 +33,7 @@ const Navbar: React.FC = () => {
     { path: '/events', text: 'Events', icon: <FolderGit2 className="w-4 h-4" /> },
     { path: '/about', text: 'About', icon: <Code2 className="w-4 h-4" /> },
     { path: '/influencers', text: 'Influencers', icon: <Users className="w-4 h-4" /> },
+    { path: '/contact', text: 'Contact', icon: <Mail className="w-4 h-4" /> },
   ];
 
   return (

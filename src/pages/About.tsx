@@ -269,7 +269,7 @@ const About = () => {
               Ready to take your marketing to the next level? We'd love to hear from you.
             </p>
             <a
-              href="mailto:contact@company.com"
+              href="/contact"
               className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-6 py-3 rounded-xl transition-colors"
             >
               Contact Us

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, BrainCircuit, Pencil, Users, BarChart3, X } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import CollaboratorCarousel from '../components/CollaboratorCarousel';
 
 const Modal = ({ isOpen, onClose, children }: { isOpen: boolean; onClose: () => void; children: React.ReactNode }) => {
@@ -82,6 +83,7 @@ const FeatureCard = ({ feature, index }: { feature: any; index: number }) => {
 };
 
 const Home = () => {
+  const navigate = useNavigate();
   const firstRowFeatures = [
     {
       icon: <BrainCircuit className="w-8 h-8 text-indigo-400" />,
@@ -258,7 +260,10 @@ const Home = () => {
               </div>
               
               <div className="text-center">
-                <button className="bg-white text-indigo-600 px-8 py-4 rounded-xl hover:bg-indigo-50 transition-all duration-300 font-semibold text-lg shadow-lg hover:scale-105 hover:shadow-2xl">
+                <button 
+                  onClick={() => navigate('/contact')}
+                  className="bg-white text-indigo-600 px-8 py-4 rounded-xl hover:bg-indigo-50 transition-all duration-300 font-semibold text-lg shadow-lg hover:scale-105 hover:shadow-2xl"
+                >
                   Connect with Us
                 </button>
               </div>
