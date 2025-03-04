@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Events from './pages/Events'
 import About from './pages/About'
 import Influencers from './pages/Influencers'
+import Contact from './pages/Contact'
 
 export default function App() {
   const footerLinks = [
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="/events" element={<Events />} />
             <Route path="/about" element={<About />} />
             <Route path="/influencers" element={<Influencers />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer copyright=" 2025 My Project" links={footerLinks} />

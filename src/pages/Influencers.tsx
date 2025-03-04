@@ -265,7 +265,7 @@ export default function Influencers() {
       role: "Skincare Expert",
       tier: "Micro-Influencers",
       category: "Lifestyle & Fashion",
-      image: "https://grazia.wwmindia.com/content/2020/jul/riya81593599828.jpg",
+      image: "https://content.tupaki.com/twdata/2018/0718/photos/actress/Riya%20Jain%20Photo%20Shoot/normal/Riya%20Jain%20Photo%20Shoot_11.jpg",
       bio: "Riya Jain is a prominent Indian fashion, travel, and lifestyle blogger",
       detailed_bio: "Riya's consistent efforts in documenting her personal style led to collaborations with renowned brands such as Jimmy Choo, Hermès, and Maybelline. Her aesthetic is characterized by an easy-chic vibe, with a penchant for playing with colors while maintaining a refined sense of taste. In addition to fashion, she has expanded her content to include travel and lifestyle topics, reflecting her diverse interests.",
       categories: ["Skincare","Minimalist Fashion"],
