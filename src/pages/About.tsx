@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Users, Rocket, Target, Mail, X } from 'lucide-react';
+import React, { useState } from "react";
+import { Users, Rocket, Target, Mail, X } from "lucide-react";
 
 interface TeamMember {
   name: string;
@@ -15,19 +15,27 @@ interface TeamMember {
   };
 }
 
-const Modal = ({ isOpen, onClose, children }: { isOpen: boolean; onClose: () => void; children: React.ReactNode }) => {
+const Modal = ({
+  isOpen,
+  onClose,
+  children
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+}) => {
   if (!isOpen) return null;
 
   return (
-    <div 
+    <div
       className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
       onClick={onClose}
     >
-      <div 
+      <div
         className="relative bg-gradient-to-b from-slate-800 to-slate-900 rounded-xl p-8 max-w-3xl w-full shadow-2xl transform transition-all duration-300 scale-100 opacity-100 animate-modalIn overflow-y-auto max-h-[90vh]"
-        onClick={e => e.stopPropagation()}
+        onClick={(e) => e.stopPropagation()}
       >
-        <button 
+        <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-slate-700/50 p-2"
         >
@@ -44,65 +52,70 @@ const About = () => {
 
   const teamMembers: TeamMember[] = [
     {
-      name: 'Ansh Pushpak',
-      role: 'Digital Marketing Strategist',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800',
-      mini_bio: '5+ years of experience in social media growth, influencer marketing, and content creation.',
-      detailed_bio: 'Ansh Pushpak is a digital marketing strategist with 5+ years of experience in social media growth, influencer marketing, and content creation. He has also worked for a news agency in the field of content creation and marketing. At SRCC, he played a key role in scaling Instagram pages to over 100K+ followers, achieving millions of impressions and engagements through strategic campaigns. He has led high-impact digital promotions for major college events, driving brand visibility and audience interaction. With expertise in performance marketing, PR, and viral content creation, Ansh brings a data-driven approach to every campaign. His skills in Adobe Creative Suite, social media analytics, and brand storytelling make him a driving force behind Influenz’s marketing success. ',
+      name: "Ansh Pushpak",
+      role: "Digital Marketing Strategist",
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800",
+      mini_bio:
+        "5+ years of experience in social media growth, influencer marketing, and content creation.",
+      detailed_bio:
+        "Ansh Pushpak is a digital marketing strategist with 5+ years of experience in social media growth, influencer marketing, and content creation. He has also worked for a news agency in the field of content creation and marketing. At SRCC, he played a key role in scaling Instagram pages to over 100K+ followers, achieving millions of impressions and engagements through strategic campaigns. He has led high-impact digital promotions for major college events, driving brand visibility and audience interaction. With expertise in performance marketing, PR, and viral content creation, Ansh brings a data-driven approach to every campaign. His skills in Adobe Creative Suite, social media analytics, and brand storytelling make him a driving force behind Influenz’s marketing success. ",
       expertise: [
-        'Social Media Growth Strategy',
-        'Content Creation & Marketing',
-        'Influencer Marketing',
-        'Performance Marketing',
-        'PR Management',
-        'Adobe Creative Suite',
-        'Social Media Analytics',
-        'Brand Storytelling'
+        "Social Media Growth Strategy",
+        "Content Creation & Marketing",
+        "Influencer Marketing",
+        "Performance Marketing",
+        "PR Management",
+        "Adobe Creative Suite",
+        "Social Media Analytics",
+        "Brand Storytelling"
       ],
       achievements: [
-        'Scaled Instagram pages to over 100K+ followers',
-        'Achieved millions of impressions through strategic campaigns',
-        'Led successful digital promotions for major college events',
-        'Experience in news agency content creation',
-        'Proven track record in viral content creation'
+        "Scaled Instagram pages to over 100K+ followers",
+        "Achieved millions of impressions through strategic campaigns",
+        "Led successful digital promotions for major college events",
+        "Experience in news agency content creation",
+        "Proven track record in viral content creation"
       ],
       contact: {
-        email: 'ansh@company.com',
-        linkedin: 'linkedin.com/in/ansh-pushpak'
+        email: "ansh@company.com",
+        linkedin: "linkedin.com/in/ansh-pushpak"
       }
     },
     {
-      name: 'Gourav',
-      role: 'Marketing Geek',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800',
-      mini_bio: 'Expertise in brand partnerships, digital engagement, and campaign execution.',
-      detailed_bio: "Gourav is a marketing geek with expertise in brand partnerships, digital engagement, and campaign execution. At SRCC, he has led marketing outreach for large-scale events like Histrionica and Crossroads, managing campaigns that reached over 47.3 million people and attracted 55,000+ attendees. He has collaborated with top brands including Reliance, McDonald's, Sony, and ONGC, executing high-impact digital marketing and influencer-driven campaigns. With experience in managing ₹50+ lakh in marketing funds and overseeing multi-channel promotional strategies, Gourav specialises in data-driven brand positioning, content marketing, and audience engagement. ",
+      name: "Gourav",
+      role: "Marketing Geek",
+      image: "/Users/abhay/Desktop/Marketing/src/assets/Gourav.jpg",
+      mini_bio:
+        "Expertise in brand partnerships, digital engagement, and campaign execution.",
+      detailed_bio:
+        "Gourav is a marketing geek with expertise in brand partnerships, digital engagement, and campaign execution. At SRCC, he has led marketing outreach for large-scale events like Histrionica and Crossroads, managing campaigns that reached over 47.3 million people and attracted 55,000+ attendees. He has collaborated with top brands including Reliance, McDonald's, Sony, and ONGC, executing high-impact digital marketing and influencer-driven campaigns. With experience in managing ₹50+ lakh in marketing funds and overseeing multi-channel promotional strategies, Gourav specialises in data-driven brand positioning, content marketing, and audience engagement. ",
       expertise: [
-        'Brand Partnerships',
-        'Digital Marketing Strategy',
-        'Event Marketing',
-        'Campaign Management',
-        'Data-Driven Brand Positioning',
-        'Content Marketing',
-        'Audience Engagement',
-        'Multi-Channel Marketing'
+        "Brand Partnerships",
+        "Digital Marketing Strategy",
+        "Event Marketing",
+        "Campaign Management",
+        "Data-Driven Brand Positioning",
+        "Content Marketing",
+        "Audience Engagement",
+        "Multi-Channel Marketing"
       ],
       achievements: [
-        'Led marketing for Histrionica and Crossroads events reaching 47.3M+ people',
-        'Attracted 55,000+ attendees through strategic campaigns',
-        'Managed ₹50+ lakh in marketing funds',
-        'Collaborated with major brands like Reliance, McDonald\'s, Sony, and ONGC',
-        'Successfully executed influencer-driven campaigns'
+        "Led marketing for Histrionica and Crossroads events reaching 47.3M+ people",
+        "Attracted 55,000+ attendees through strategic campaigns",
+        "Managed ₹50+ lakh in marketing funds",
+        "Collaborated with major brands like Reliance, McDonald's, Sony, and ONGC",
+        "Successfully executed influencer-driven campaigns"
       ],
       contact: {
-        email: 'gourav@company.com',
-        linkedin: 'linkedin.com/in/gourav'
+        email: "gourav@company.com",
+        linkedin: "linkedin.com/in/gourav"
       }
-    },
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="container mx-auto px-4">
@@ -110,7 +123,8 @@ const About = () => {
             About Us
           </h1>
           <p className="text-gray-400 text-lg md:text-xl text-center mb-12 max-w-2xl mx-auto">
-            We're a team of marketing experts dedicated to helping businesses grow and succeed in the digital age
+            We're a team of marketing experts dedicated to helping businesses
+            grow and succeed in the digital age
           </p>
         </div>
       </section>
@@ -119,31 +133,34 @@ const About = () => {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 rounded-2xl p-8 hover:bg-slate-800 transition-colors">
+            <div className="bg-slate-800 rounded-2xl p-8  transition-colors">
               <div className="w-12 h-12 bg-indigo-600/10 rounded-xl flex items-center justify-center mb-6">
                 <Rocket className="w-6 h-6 text-indigo-400" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Our Mission</h3>
               <p className="text-slate-400">
-                To empower businesses with innovative marketing solutions that drive growth and create lasting impact.
+                To empower businesses with innovative marketing solutions that
+                drive growth and create lasting impact.
               </p>
             </div>
-            <div className="bg-slate-800/50 rounded-2xl p-8 hover:bg-slate-800 transition-colors">
+            <div className="bg-slate-800 rounded-2xl p-8  transition-colors">
               <div className="w-12 h-12 bg-indigo-600/10 rounded-xl flex items-center justify-center mb-6">
                 <Target className="w-6 h-6 text-indigo-400" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Our Vision</h3>
               <p className="text-slate-400">
-                To be the leading force in transforming how businesses connect with their audiences in the digital world.
+                To be the leading force in transforming how businesses connect
+                with their audiences in the digital world.
               </p>
             </div>
-            <div className="bg-slate-800/50 rounded-2xl p-8 hover:bg-slate-800 transition-colors">
+            <div className="bg-slate-800 rounded-2xl p-8  transition-colors">
               <div className="w-12 h-12 bg-indigo-600/10 rounded-xl flex items-center justify-center mb-6">
                 <Users className="w-6 h-6 text-indigo-400" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Our Values</h3>
               <p className="text-slate-400">
-                Innovation, integrity, and client success are at the core of everything we do.
+                Innovation, integrity, and client success are at the core of
+                everything we do.
               </p>
             </div>
           </div>
@@ -153,12 +170,14 @@ const About = () => {
       {/* Team Section */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Meet Our Team</h2>
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">
+            Meet Our Team
+          </h2>
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             {teamMembers.map((member, index) => (
-              <div 
-                key={index} 
-                className="bg-slate-800/50 rounded-2xl overflow-hidden group hover:bg-slate-800 transition-colors cursor-pointer"
+              <div
+                key={index}
+                className="bg-slate-800 rounded-2xl overflow-hidden group transition-colors cursor-pointer"
                 onClick={() => setSelectedMember(member)}
               >
                 <div className="relative h-96 overflow-hidden">
@@ -170,9 +189,13 @@ const About = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold text-white">{member.name}</h3>
+                  <h3 className="text-2xl font-bold text-white">
+                    {member.name}
+                  </h3>
                   <p className="text-indigo-400 mt-2 text-lg">{member.role}</p>
-                  <p className="text-slate-400 mt-4 text-lg leading-relaxed">{member.mini_bio}</p>
+                  <p className="text-slate-400 mt-4 text-lg leading-relaxed">
+                    {member.mini_bio}
+                  </p>
                   <button className="mt-6 text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium">
                     View Full Profile →
                   </button>
@@ -195,21 +218,30 @@ const About = () => {
               />
               <div>
                 <h2 className="text-3xl font-bold">{selectedMember.name}</h2>
-                <p className="text-indigo-400 text-xl mt-2">{selectedMember.role}</p>
+                <p className="text-indigo-400 text-xl mt-2">
+                  {selectedMember.role}
+                </p>
               </div>
             </div>
-            
+
             <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-semibold mb-4">About</h3>
-                <p className="text-slate-300 leading-relaxed">{selectedMember.detailed_bio}</p>
+                <p className="text-slate-300 leading-relaxed">
+                  {selectedMember.detailed_bio}
+                </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-4">Areas of Expertise</h3>
+                <h3 className="text-xl font-semibold mb-4">
+                  Areas of Expertise
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {selectedMember.expertise?.map((skill, index) => (
-                    <span key={index} className="bg-indigo-600/20 text-indigo-400 px-3 py-1 rounded-full text-sm">
+                    <span
+                      key={index}
+                      className="bg-indigo-600/20 text-indigo-400 px-3 py-1 rounded-full text-sm"
+                    >
                       {skill}
                     </span>
                   ))}
@@ -244,7 +276,11 @@ const About = () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo-600/10 text-indigo-400 hover:bg-indigo-600/20 transition-colors"
                     >
-                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                      <svg
+                        className="w-4 h-4"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
                         <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.68 1.68 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
                       </svg>
                       <span>LinkedIn</span>
@@ -260,13 +296,14 @@ const About = () => {
       {/* Contact Section */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="bg-slate-800/50 rounded-2xl p-8 text-center">
+          <div className="bg-slate-800 rounded-2xl p-8 text-center">
             <div className="w-12 h-12 bg-indigo-600/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
               <Mail className="w-6 h-6 text-indigo-400" />
             </div>
             <h2 className="text-2xl font-bold text-white mb-4">Get in Touch</h2>
             <p className="text-slate-400 mb-6">
-              Ready to take your marketing to the next level? We'd love to hear from you.
+              Ready to take your marketing to the next level? We'd love to hear
+              from you.
             </p>
             <a
               href="/contact"

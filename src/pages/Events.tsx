@@ -127,7 +127,7 @@ const Events = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="container mx-auto px-4">
@@ -147,7 +147,7 @@ const Events = () => {
             {events.map((event, index) => (
               <div
                 key={event.id}
-                className="bg-slate-800/50 rounded-2xl overflow-hidden group hover:bg-slate-800 transition-colors"
+                className="bg-slate-800 rounded-2xl overflow-hidden group transition-colors"
               >
                 <div className={`flex flex-col md:flex-row ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                   <div className="relative md:w-1/3 h-48 md:h-auto overflow-hidden">

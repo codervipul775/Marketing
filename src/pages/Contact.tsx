@@ -134,18 +134,18 @@ const Contact: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 py-24 sm:py-32 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-white py-24 sm:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-white mb-6">Get in Touch</h1>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <h1 className="text-4xl font-bold text-indigo-300 mb-6">Get in Touch</h1>
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
             Have questions or want to collaborate? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="lg:col-span-2">
-            <div className="bg-white/5 backdrop-blur-xl shadow-lg rounded-xl p-8 sm:p-10 border border-white/10">
+            <div className="bg-slate-800 backdrop-blur-xl shadow-lg rounded-xl p-8 sm:p-10 border border-white/10">
               <form onSubmit={handleSubmit} className="space-y-8">
                 <InputField
                   name="name"
@@ -250,7 +250,7 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="lg:col-span-1">
-            <div className="bg-white/5 backdrop-blur-xl shadow-lg rounded-xl p-8 sm:p-10 space-y-10 border border-white/10">
+            <div className="bg-slate-800 backdrop-blur-xl shadow-lg rounded-xl p-8 sm:p-10 space-y-10 border border-white/10">
               <h3 className="text-2xl font-semibold text-white">Contact Information</h3>
               
               <div className="space-y-8">

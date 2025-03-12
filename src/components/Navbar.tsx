@@ -32,7 +32,6 @@ const Navbar: React.FC = () => {
     { path: '/', text: 'Home', icon: <Home className="w-4 h-4" /> },
     { path: '/events', text: 'Events', icon: <FolderGit2 className="w-4 h-4" /> },
     { path: '/about', text: 'About', icon: <Code2 className="w-4 h-4" /> },
-    { path: '/influencers', text: 'Influencers', icon: <Users className="w-4 h-4" /> },
     { path: '/contact', text: 'Contact', icon: <Mail className="w-4 h-4" /> },
   ];
 
@@ -44,23 +43,27 @@ const Navbar: React.FC = () => {
           <Link to="/" className="flex items-center gap-2">
             <Code2 className="h-6 w-6 text-indigo-400" />
             <span className="text-xl font-bold bg-gradient-to-r from-white to-indigo-300 text-transparent bg-clip-text">
-              Marketing
+              Influenz
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex">
-            <ul className="flex items-center gap-1">
-              {navLinks.map((link) => (
-                <NavLink
-                  key={link.path}
-                  to={link.path}
-                  icon={link.icon}
-                  text={link.text}
-                  active={isActive(link.path)}
-                />
-              ))}
-            </ul>
+          <div className="hidden md:flex md:gap-x-12">
+            <Link to="/" className={`text-sm font-semibold leading-6 ${isActive('/') ? 'text-indigo-400' : 'text-gray-300 hover:text-white'}`}>
+              Home
+            </Link>
+            <Link to="/about" className={`text-sm font-semibold leading-6 ${isActive('/about') ? 'text-indigo-400' : 'text-gray-300 hover:text-white'}`}>
+              About
+            </Link>
+            <Link to="/events" className={`text-sm font-semibold leading-6 ${isActive('/events') ? 'text-indigo-400' : 'text-gray-300 hover:text-white'}`}>
+              Events
+            </Link>
+            <Link to="/brands" className={`text-sm font-semibold leading-6 ${isActive('/brands') ? 'text-indigo-400' : 'text-gray-300 hover:text-white'}`}>
+              Brands
+            </Link>
+            <Link to="/contact" className={`text-sm font-semibold leading-6 ${isActive('/contact') ? 'text-indigo-400' : 'text-gray-300 hover:text-white'}`}>
+              Contact
+            </Link>
           </div>
 
           {/* Mobile Navigation Button */}
@@ -100,21 +103,51 @@ const Navbar: React.FC = () => {
         {/* Mobile Navigation Menu */}
         <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={() => setIsMenuOpen(false)}
-                className={`flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium ${
-                  isActive(link.path)
-                    ? 'bg-indigo-500/10 text-indigo-400'
-                    : 'text-gray-300 hover:bg-indigo-500/5'
-                }`}
-              >
-                {link.icon}
-                {link.text}
-              </Link>
-            ))}
+            <Link
+              to="/"
+              onClick={() => setIsMenuOpen(false)}
+              className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-300 hover:bg-gray-800 ${
+                isActive('/') ? 'bg-indigo-500/10 text-indigo-400' : ''
+              }`}
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              onClick={() => setIsMenuOpen(false)}
+              className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-300 hover:bg-gray-800 ${
+                isActive('/about') ? 'bg-indigo-500/10 text-indigo-400' : ''
+              }`}
+            >
+              About
+            </Link>
+            <Link
+              to="/events"
+              onClick={() => setIsMenuOpen(false)}
+              className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-300 hover:bg-gray-800 ${
+                isActive('/events') ? 'bg-indigo-500/10 text-indigo-400' : ''
+              }`}
+            >
+              Events
+            </Link>
+            <Link
+              to="/brands"
+              onClick={() => setIsMenuOpen(false)}
+              className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-300 hover:bg-gray-800 ${
+                isActive('/brands') ? 'bg-indigo-500/10 text-indigo-400' : ''
+              }`}
+            >
+              Brands
+            </Link>
+            <Link
+              to="/contact"
+              onClick={() => setIsMenuOpen(false)}
+              className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-300 hover:bg-gray-800 ${
+                isActive('/contact') ? 'bg-indigo-500/10 text-indigo-400' : ''
+              }`}
+            >
+              Contact
+            </Link>
           </div>
         </div>
       </div>
