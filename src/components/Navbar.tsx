@@ -33,6 +33,7 @@ const Navbar: React.FC = () => {
     { path: '/events', text: 'Events', icon: <FolderGit2 className="w-4 h-4" /> },
     { path: '/about', text: 'About', icon: <Code2 className="w-4 h-4" /> },
     { path: '/contact', text: 'Contact', icon: <Mail className="w-4 h-4" /> },
+    { path: '/brand', text: 'Brand', icon: <Users className="w-4 h-4" /> },
   ];
 
   return (
@@ -58,8 +59,8 @@ const Navbar: React.FC = () => {
             <Link to="/events" className={`text-sm font-semibold leading-6 ${isActive('/events') ? 'text-indigo-400' : 'text-gray-300 hover:text-white'}`}>
               Events
             </Link>
-            <Link to="/brands" className={`text-sm font-semibold leading-6 ${isActive('/brands') ? 'text-indigo-400' : 'text-gray-300 hover:text-white'}`}>
-              Brands
+            <Link to="/brand" className={`text-sm font-semibold leading-6 ${isActive('/brand') ? 'text-indigo-400' : 'text-gray-300 hover:text-white'}`}>
+              Brand
             </Link>
             <Link to="/contact" className={`text-sm font-semibold leading-6 ${isActive('/contact') ? 'text-indigo-400' : 'text-gray-300 hover:text-white'}`}>
               Contact
