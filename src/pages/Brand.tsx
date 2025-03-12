@@ -11,63 +11,63 @@ interface Brand {
 const brands: Brand[] = [
   {
     name: "Social Nation",
-    description: "Leading technology solutions provider specializing in AI and machine learning applications.",
-    industry: "Technology",
-    logo: "https://example.com/logo.png"
+    description: "A social media marketing agency focused exclusively on social media strategies.",
+    industry: "Social Media",
+    logo: "https://media.licdn.com/dms/image/v2/C4E0BAQFh3inqhmvjwA/company-logo_200_200/company-logo_200_200/0/1630630259001?e=2147483647&v=beta&t=9i30cprPVucw3gy6-y7JrjD6o-rnY22FxyO9Yd2wDzs"
   },
   {
     name: "StartupNews.fyi",
-    description: "Sustainable products manufacturer committed to environmental conservation.",
-    industry: "Sustainability",
+    description: "Focusing on delivering news and information about startups India and globally.",
+    industry: "Media and Technology",
     logo: "https://media.licdn.com/dms/image/v2/D560BAQEmtIszb9OidA/company-logo_200_200/company-logo_200_200/0/1737119074651/startupnewsfyi_logo?e=2147483647&v=beta&t=01d8b0rHXtE0joI3litPBRC9EQGm1amHmgcRBI-Txr0"
   },
   {
     name: "Face Magazine",
-    description: "Healthcare innovation company revolutionizing patient care through digital solutions.",
+    description: "Shaping contemporary culture through its coverage of fashion trends.",
     industry: "FASHION ART CULTURE ENTERTAINMENT",
-    logo: "https://example.com/logo.png"
+    logo: "https://facemagazine.in/wp-content/uploads/2022/11/FACEPrimary-Logo.png"
   },
   {
     name: "Pepsi",
-    description: "Digital banking platform making financial services accessible to everyone.",
-    industry: "Finance",
-    logo: ""
+    description: "It is a multinational company specializing in the manufacturing, marketing.",
+    industry: "Food and Beverage",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/68/Pepsi_2023.svg"
   },
   {
     name: "Bellavita",
-    description: "Digital media company creating engaging content across multiple platforms.",
-    industry: "Media",
-    logo: ""
+    description: "Specializing in luxury perfumes, skincare, and haircare products",
+    industry: "Beauty and Personal Care",
+    logo: "https://exchange4media.gumlet.io/news-photo/130458-BELLAVITA1.jpg"
   },
   {
     name: "Zingbus",
-    description: "Digital media company creating engaging content across multiple platforms.",
-    industry: "Media",
-    logo: ""
+    description: " Providing online bus ticket booking services across India.",
+    industry: "Transportation",
+    logo: "https://d1flzashw70bti.cloudfront.net/next-gen/images/zingbus-name-logo.webp"
   },
   {
     name: "Flake",
-    description: "Digital media company creating engaging content across multiple platforms.",
-    industry: "Media",
-    logo: ""
+    description: " A British chocolate bar known for its thinly folded milk chocolate.",
+    industry: "Food",
+    logo: "https://media-hosting.imagekit.io//b203b7ff7d90407d/Screenshot%202025-03-12%20at%207.07.44%E2%80%AFPM.png?Expires=1836394689&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=cMuQzkO~yfgo7gpHEThK-YWS7erXr6Q~amnvJOGi0aj-tXlvBBuBwC6VRESfK0YF5J7ys0Z90M469d9HTvXgDSOyT97TKTALOyPLRk8G1-ivN0N-TEm67ssY7cdzR7~eKXA4p1uo09895Vk4C8m8OdMpN48ON6GcOq~G7WrRT7lnxeRzW9VhHmZCgOfaD0lI5q~tHn8iKqH3eTN5or16G7lyaTc4SOd8w83yAVW36kA~UCnMuioW6TGvKB0drKIxE7ciVov0j5G19kqLWW4qR2re1LbHxk~Jp2zE00KWnBN-3dOjLK8fdH364jqve5tu3oAAEDfH-OdvjLGJs62vyA__"
   },
   {
     name: "Kitkat",
-    description: "Digital media company creating engaging content across multiple platforms.",
-    industry: "Media",
-    logo: ""
+    description: "KitKat is a product of Nestlé, which operates in the Food and Beverage industry.",
+    industry: "Food and Beverage",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/KitKat_logo.svg/2560px-KitKat_logo.svg.png"
   },
   {
     name: "BlueTokai",
-    description: "Digital media company creating engaging content across multiple platforms.",
-    industry: "Media",
-    logo: ""
+    description: "Blue Tokai Coffee Roasters operates in the Specialty Coffee industry.",
+    industry: "Food and Beverage",
+    logo: "https://img-cdn.thepublive.com/fit-in/1200x675/entrackr/media/media_files/2025/02/07/MJ2nzc6Yf3HfE2MOnjJe.png"
   },
   {
     name: "Manforce",
-    description: "Digital media company creating engaging content across multiple platforms.",
-    industry: "Media",
-    logo: ""
+    description: "It is a brand under Mankind Pharma, known for manufacturing condoms.",
+    industry: "Pharmaceutical and Healthcare",
+    logo: "https://mir-s3-cdn-cf.behance.net/projects/404/2b9b50195309425.Y3JvcCw5NjYsNzU2LDMxLDE1Mw.png"
   }
 ];
 
@@ -97,7 +97,7 @@ const Brand = () => {
           className="text-center mb-16"
         >
           <h1 className="text-5xl font-extrabold text-gray-900 sm:text-6xl sm:tracking-tight lg:text-7xl">
-            Our Partner <span className="text-indigo-600">Brands</span>
+            Our Partner <span className="text-yellow-500">Brands</span>
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-xl text-gray-500">
             We collaborate with industry-leading brands to create impactful marketing campaigns and drive business growth.

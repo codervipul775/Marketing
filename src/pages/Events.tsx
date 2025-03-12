@@ -127,11 +127,11 @@ const Events = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0B1120]">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative pt-20 overflow-hidden mb-3">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white text-transparent bg-clip-text">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-black  bg-clip-text">
             Our Events
           </h1>
           <p className="text-gray-400 text-lg md:text-xl text-center mb-12 max-w-2xl mx-auto">
@@ -147,7 +147,7 @@ const Events = () => {
             {events.map((event, index) => (
               <div
                 key={event.id}
-                className="bg-slate-800 rounded-2xl overflow-hidden group transition-colors"
+                className="bg-gradient-to-l from-gray-500 to-gray-100 bg-transparent/40 rounded-2xl overflow-hidden group transition-colors"
               >
                 <div className={`flex flex-col md:flex-row ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                   <div className="relative md:w-1/3 h-48 md:h-auto overflow-hidden">
@@ -158,7 +158,7 @@ const Events = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="text-white text-sm font-medium">
+                      <div className="text-yellow-500 text-sm font-medium">
                         View Details
                       </div>
                     </div>
@@ -166,27 +166,27 @@ const Events = () => {
                   
                   <div className={`p-6 md:p-8 md:w-2/3 flex flex-col ${index % 2 === 1 ? 'md:items-end md:text-right' : ''}`}>
                     <div className={`flex items-center gap-3 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
-                      <div className="bg-indigo-600/10 text-indigo-400 px-3 py-1 rounded-full text-sm">
+                      <div className="bg-indigo-600/10 text-blue-700 px-3 py-1 rounded-full text-sm">
                         {event.category}
                       </div>
                       <div className="h-1.5 w-1.5 rounded-full bg-slate-600" />
-                      <div className="text-slate-400 text-sm">{event.date}</div>
+                      <div className="text-black text-sm">{event.date}</div>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-white mt-4">
+                    <h3 className="text-2xl font-bold text-gray-800 mt-4">
                       {event.title}
                     </h3>
 
-                    <p className="text-slate-400 mt-2 line-clamp-2">
+                    <p className="text-black mt-2 line-clamp-2">
                       {event.description}
                     </p>
 
                     <div className="mt-6 space-y-3">
-                      <div className={`flex items-center gap-3 text-slate-400 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+                      <div className={`flex items-center gap-3 text-black ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                         <MapPin className="w-4 h-4 text-indigo-400 flex-shrink-0" />
                         <span>{event.location}</span>
                       </div>
-                      <div className={`flex items-center gap-3 text-slate-400 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+                      <div className={`flex items-center gap-3 text-black ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                         <Users className="w-4 h-4 text-indigo-400 flex-shrink-0" />
                         <span>{event.attendees} Attendees</span>
                       </div>

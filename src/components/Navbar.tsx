@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
               Events
             </Link>
             <Link to="/brand" className={`text-sm font-semibold leading-6 ${isActive('/brand') ? 'text-indigo-400' : 'text-gray-300 hover:text-white'}`}>
-              Brand
+              Brands
             </Link>
             <Link to="/contact" className={`text-sm font-semibold leading-6 ${isActive('/contact') ? 'text-indigo-400' : 'text-gray-300 hover:text-white'}`}>
               Contact
@@ -132,10 +132,10 @@ const Navbar: React.FC = () => {
               Events
             </Link>
             <Link
-              to="/brands"
+              to="/brand"
               onClick={() => setIsMenuOpen(false)}
               className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-300 hover:bg-gray-800 ${
-                isActive('/brands') ? 'bg-indigo-500/10 text-indigo-400' : ''
+                isActive('/brand') ? 'bg-indigo-500/10 text-indigo-400' : ''
               }`}
             >
               Brands

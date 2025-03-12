@@ -115,11 +115,11 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0B1120] text-white">
+    <div className="min-h-screen bg-white text-white">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative pt-20 overflow-hidden">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-center bg-gradient-to-r from-white to-indigo-300 text-transparent bg-clip-text">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-black  bg-clip-text">
             About Us
           </h1>
           <p className="text-gray-400 text-lg md:text-xl text-center mb-12 max-w-2xl mx-auto">
@@ -130,35 +130,35 @@ const About = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-12">
+      <section className="py-2">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-slate-800 rounded-2xl p-8  transition-colors">
+            <div className="bg-gradient-to-l from-gray-500 to-gray-100 bg-transparent/40 rounded-2xl p-8  transition-colors">
               <div className="w-12 h-12 bg-indigo-600/10 rounded-xl flex items-center justify-center mb-6">
                 <Rocket className="w-6 h-6 text-indigo-400" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Our Mission</h3>
-              <p className="text-slate-400">
+              <h3 className="text-xl font-bold text-black mb-4">Our Mission</h3>
+              <p className="text-slate-700">
                 To empower businesses with innovative marketing solutions that
                 drive growth and create lasting impact.
               </p>
             </div>
-            <div className="bg-slate-800 rounded-2xl p-8  transition-colors">
+            <div className="bg-gradient-to-l from-gray-500 to-gray-100 bg-transparent/40 rounded-2xl p-8  transition-colors">
               <div className="w-12 h-12 bg-indigo-600/10 rounded-xl flex items-center justify-center mb-6">
                 <Target className="w-6 h-6 text-indigo-400" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Our Vision</h3>
-              <p className="text-slate-400">
+              <h3 className="text-xl font-bold text-black mb-4">Our Vision</h3>
+              <p className="text-slate-700">
                 To be the leading force in transforming how businesses connect
                 with their audiences in the digital world.
               </p>
             </div>
-            <div className="bg-slate-800 rounded-2xl p-8  transition-colors">
+            <div className="bg-gradient-to-l from-gray-500 to-gray-100 bg-transparent/40 rounded-2xl p-8  transition-colors">
               <div className="w-12 h-12 bg-indigo-600/10 rounded-xl flex items-center justify-center mb-6">
                 <Users className="w-6 h-6 text-indigo-400" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Our Values</h3>
-              <p className="text-slate-400">
+              <h3 className="text-xl font-bold text-black mb-4">Our Values</h3>
+              <p className="text-slate-700">
                 Innovation, integrity, and client success are at the core of
                 everything we do.
               </p>
@@ -296,12 +296,12 @@ const About = () => {
       {/* Contact Section */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="bg-slate-800 rounded-2xl p-8 text-center">
+          <div className="bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-2xl p-8 text-center">
             <div className="w-12 h-12 bg-indigo-600/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
-              <Mail className="w-6 h-6 text-indigo-400" />
+              <Mail className="w-6 h-6 text-indigo-700" />
             </div>
             <h2 className="text-2xl font-bold text-white mb-4">Get in Touch</h2>
-            <p className="text-slate-400 mb-6">
+            <p className="text-black mb-6">
               Ready to take your marketing to the next level? We'd love to hear
               from you.
             </p>

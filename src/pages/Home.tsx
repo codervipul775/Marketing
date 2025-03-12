@@ -133,16 +133,19 @@ const Home = () => {
   return (
     <div className="w-screen">
       {/* Hero Section */}
-      <section className="w-screen bg-[url(https://images.stockcake.com/public/4/9/e/49e5d82b-a4e9-4914-bf94-2dd0acc3020e_large/global-business-handshake-stockcake.jpg)] py-20 bg-no-repeat backdrop-contrast-70 bg-cover bg-center h-[50vh] ">
+      <section className="w-screen py-20 bg-no-repeat backdrop-contrast-70 bg-cover bg-right h-[60vh] bg-white ">
         <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white bg-sky-400 text-transparent bg-clip-text">
-              Influenz
+          <div className="text-center flex">
+            <div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-8 text-black bg-clip-text ">
+              Transform Your Brand with <span className='text-yellow-500'>Influenz</span>.
             </h1>
-            <p className="text-black bg-sky-400 text-lg md:text-xl mb-8 max-w-2xl  drop-shadow-xs mx-auto">
-            Elevate your brand with powerful marketing strategies that drive engagement and growth!
+           
+            <p className="text-black text-lg md:text-xl mb-8 max-w-2xl w-15 drop-shadow-xs mx-auto mt-6">
+            Unlock the full potential of influencer marketing and connect with your audience like never before. Drive impact, build trust, and grow your brand effortlessly! 🚀
             </p>
-            
+            </div>
+            <img src='https://media-hosting.imagekit.io//f4d7ce963d5e4343/an-isometric-digital-illustration-repres_PMUSlDDlSrmgqJuzvFJlSg_6RlXR3veRdWpHWtyOWgVNw-removebg-preview.png?Expires=1836399204&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=id9prKV3N8UayhfpajV~dQLsMol9ipKwHmmpr8cptolu3HB-ajNxESZX6yc~SwxnYIfiXfTO050jRGd55cbnH0-ULdgU8R9PX77GkDtds8-xIE9YOe13n5NtxkDjlrjOW49CfI8q3Pliw~vh0JLAPCEDxvwqi-8469bXY5cu4pLFe59nqawV4jXnEMNwKYOTXwvkAP4f-9PJ0KK6tsjCWDvFB-rmXqwWnQ7XGQYVGJQZd1BEWZoyuQgtvkuIHBug8YEdgTZe~X1bdtrzNbG9wckchPG3IpKUDU7Ngtwivqg-jYjAAzbWNSkxxWXU5QLidKJFjf1NIdeaUXc7NnOfJA__' alt="Influenz" className="mx-auto w-1/3" />
           </div>
         </div>
       </section>
