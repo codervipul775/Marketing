@@ -8,7 +8,7 @@ const Modal = ({ isOpen, onClose, children }: { isOpen: boolean; onClose: () => 
 
   return (
     <div 
-      className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 bg-white/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
       onClick={onClose}
     >
       <div 
@@ -57,20 +57,20 @@ const FeatureCard = ({ feature, index }: { feature: any; index: number }) => {
           <div className="p-4 rounded-lg bg-slate-700/50">
             {feature.icon}
           </div>
-          <div>
-            <h3 className="text-2xl font-bold text-white mb-2">
+          <div className='justify-start items-start flex flex-col gap-2'>
+            <h3 className="text-2xl font-bold justify-start text-start text-white mb-2">
               {feature.title}
             </h3>
-            <p className="text-gray-400 leading-relaxed text-lg mb-4">
+            <p className="text-gray-400 justify-start text-start leading-relaxed text-lg mb-4">
               {feature.miniDescription}
             </p>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 justify-start text-start leading-relaxed">
               {feature.description}
             </p>
-            <h3 className="text-xl font-semibold text-white mb-2">
+            <h3 className="text-xl font-semibold justify-start text-start text-white mb-2">
               {feature.keypoint_title}
             </h3>
-            <ul className="text-gray-300 leading-relaxed list-disc list-inside">
+            <ul className="text-gray-300 justify-start text-start leading-relaxed list-disc list-inside">
               {feature.keypoint.split('\n').map((point, index) => (
                 <li key={index}>{point}</li>
               ))}
@@ -133,13 +133,13 @@ const Home = () => {
   return (
     <div className="w-screen">
       {/* Hero Section */}
-      <section className="w-screen bg-gradient-to-b from-slate-900 to-slate-800 py-20">
+      <section className="w-screen bg-white py-20">
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-indigo-300 text-transparent bg-clip-text">
-              Marketing
+              Influenz
             </h1>
-            <p className="text-gray-400 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-500 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
               Join a community of passionate developers building the future through code, collaboration, and continuous learning.
             </p>
             <div className="flex justify-center gap-4">
@@ -189,7 +189,7 @@ const Home = () => {
       
 
       {/* CTA Section */}
-      <section className="w-screen bg-gradient-to-b from-slate-800 to-slate-900 py-20">
+      <section className="w-screen bg-white py-20">
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-indigo-600 to-indigo-400 p-12 rounded-2xl">
             <div className="max-w-4xl mx-auto">
