@@ -71,10 +71,10 @@ const Footer: React.FC<FooterProps> = ({ copyright, links }) => {
               <p className="text-sm text-gray-400">
                 Contact us at:{' '}
                 <a 
-                  href="mailto:contact@devclub.com" 
+                  href="partnerships@influenz.co.in" 
                   className="text-indigo-400 hover:text-indigo-300"
                 >
-                  contact@devclub.com
+                  partnerships@influenz.co.in
                 </a>
               </p>
             </div>

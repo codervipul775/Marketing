@@ -127,11 +127,11 @@ const Events = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#0B1120]">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-center bg-gradient-to-r from-white to-indigo-300 text-transparent bg-clip-text">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white text-transparent bg-clip-text">
             Our Events
           </h1>
           <p className="text-gray-400 text-lg md:text-xl text-center mb-12 max-w-2xl mx-auto">

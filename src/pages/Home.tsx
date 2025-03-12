@@ -133,28 +133,16 @@ const Home = () => {
   return (
     <div className="w-screen">
       {/* Hero Section */}
-      <section className="w-screen bg-white py-20">
+      <section className="w-screen bg-[url(https://images.stockcake.com/public/4/9/e/49e5d82b-a4e9-4914-bf94-2dd0acc3020e_large/global-business-handshake-stockcake.jpg)] py-20 bg-no-repeat backdrop-contrast-70 bg-cover bg-center h-[50vh] ">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-indigo-300 text-transparent bg-clip-text">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white bg-sky-400 text-transparent bg-clip-text">
               Influenz
             </h1>
-            <p className="text-gray-500 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-              Join a community of passionate developers building the future through code, collaboration, and continuous learning.
+            <p className="text-black bg-sky-400 text-lg md:text-xl mb-8 max-w-2xl  drop-shadow-xs mx-auto">
+            Elevate your brand with powerful marketing strategies that drive engagement and growth!
             </p>
-            <div className="flex justify-center gap-4">
-              <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors flex items-center gap-2">
-                Get Started <ArrowRight className="w-4 h-4" />
-              </button>
-              <a 
-                href="https://github.com/NSTSDC"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-slate-700 text-white px-6 py-3 rounded-lg hover:bg-slate-600 transition-colors flex items-center gap-2"
-              >
-                Learn More
-              </a>
-            </div>
+            
           </div>
         </div>
       </section>

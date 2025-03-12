@@ -55,7 +55,7 @@ const About = () => {
       name: "Ansh Pushpak",
       role: "Digital Marketing Strategist",
       image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800",
+        "https://media-hosting.imagekit.io//40143ff12a9d402b/IMG_5745.JPG?Expires=1836386124&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=g10Ui1QqeeZQdo~4T-ViN7FV3xoUtQJ2nbpRsxY9R2bBS0wSWBXbN67S2rdsWTGjARa24rMP9CsHyr1XK7QwrZLjsvRvHqhrOC3ewjGjUWmamQtL-BICe6yj9eMF3L0GGpOMDdEUCmLIAtxJ6AgJas3ISR9QhoYOFDCP-yBRcPtNuEAxwPMzlzYh2msxJppjf3UbycAh2~p~Au81lpypbbGbpeTkVeLj-LVdhkrfZr0yJtuqViu9BPcAw1cosdoQwa0ZKE6Tr2vCPo46CRGv8rrvn7J2YIB9DjKaAyxeSNBplGXGfJC3h4dTFQiU3MLPP~cVLWXMlfpv~Nprm9~bhw__",
       mini_bio:
         "5+ years of experience in social media growth, influencer marketing, and content creation.",
       detailed_bio:
@@ -78,14 +78,14 @@ const About = () => {
         "Proven track record in viral content creation"
       ],
       contact: {
-        email: "ansh@company.com",
-        linkedin: "linkedin.com/in/ansh-pushpak"
+        email: "anshpushpak@gmail.com",
+        linkedin: "https://www.linkedin.com/in/ansh-pushpak-701482202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
       }
     },
     {
       name: "Gourav",
       role: "Marketing Geek",
-      image: "/Users/abhay/Desktop/Marketing/src/assets/Gourav.jpg",
+      image: "https://media-hosting.imagekit.io//84e2d94e67904036/Gourav.jpg?Expires=1836386255&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=iopu8qPB6Nhot7OzQfjNb8qhdA1gtCophLXL9DDc3ZXyuXi7B4GpXOlb2V02YndSUz~1sUxhs9aj7nlF4dKebmeUOi7rsT182Cs2usWTasEhT3eAjZctwhEYjvt05VnJDYlFqBjmsi1ibnbrA9aTcydiOyKStWdowm-F2PhziPzSAlw27ZVG6Xt6cTA-8Amo5q29qSxluryiXEc672SBhxe6c073q4DvzoTzhBxqKdp9Fqesx4I4L1GlS8P5ipbk3pMzf23swAYGPGiBN1ooUljwkVRcPFNVScMCB3RhZV919BDMK0d7R6poMq2td3412To~sU1LMTrR8FqSc2g8jQ__",
       mini_bio:
         "Expertise in brand partnerships, digital engagement, and campaign execution.",
       detailed_bio:
@@ -108,14 +108,14 @@ const About = () => {
         "Successfully executed influencer-driven campaigns"
       ],
       contact: {
-        email: "gourav@company.com",
-        linkedin: "linkedin.com/in/gourav"
+        email: "gourav62391@gmail.com",
+        linkedin: "https://www.linkedin.com/in/gourav62391?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
       }
     }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#0B1120] text-white">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="container mx-auto px-4">

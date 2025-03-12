@@ -137,7 +137,7 @@ const Contact: React.FC = () => {
     <div className="min-h-screen bg-white py-24 sm:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-indigo-300 mb-6">Get in Touch</h1>
+          <h1 className="text-4xl font-bold text-black mb-6">Get in Touch</h1>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">
             Have questions or want to collaborate? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
           </p>
@@ -260,8 +260,8 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-base font-medium text-gray-300 mb-1">Email</h4>
-                    <a href="mailto:contact@company.com" className="text-base text-indigo-400 hover:text-indigo-300">
-                      contact@company.com
+                    <a href="partnerships@influenz.co.in" className="text-base text-indigo-400 hover:text-indigo-300">
+                    partnerships@influenz.co.in
                     </a>
                   </div>
                 </div>
@@ -272,8 +272,8 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-base font-medium text-gray-300 mb-1">Phone</h4>
-                    <a href="tel:+1234567890" className="text-base text-indigo-400 hover:text-indigo-300">
-                      +1 (234) 567-890
+                    <a href="9058522239" className="text-base text-indigo-400 hover:text-indigo-300">
+                    9058522239
                     </a>
                   </div>
                 </div>
