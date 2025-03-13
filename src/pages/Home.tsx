@@ -27,7 +27,16 @@ const Modal = ({ isOpen, onClose, children }: { isOpen: boolean; onClose: () => 
   );
 };
 
-const FeatureCard = ({ feature, index }: { feature: any; index: number }) => {
+interface Feature {
+  icon: React.ReactNode;
+  title: string;
+  miniDescription: string;
+  description: string;
+  keypoint_title: string;
+  keypoint: string;
+}
+
+const FeatureCard = ({ feature, index }: { feature: Feature; index: number }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -71,7 +80,7 @@ const FeatureCard = ({ feature, index }: { feature: any; index: number }) => {
               {feature.keypoint_title}
             </h3>
             <ul className="text-gray-300 justify-start text-start leading-relaxed list-disc list-inside">
-              {feature.keypoint.split('\n').map((point, index) => (
+              {feature.keypoint.split('\n').map((point: string, index: number) => (
                 <li key={index}>{point}</li>
               ))}
             </ul>

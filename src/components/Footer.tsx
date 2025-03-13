@@ -1,22 +1,30 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Code2, Linkedin, Twitter } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Code2, Linkedin, Twitter } from "lucide-react";
 
 interface FooterProps {
   copyright: string;
-  links: { name: string; url: string; }[];
+  links: { name: string; url: string }[];
 }
 
-const Footer: React.FC<FooterProps> = ({ copyright, links }) => {
+const Footer: React.FC<FooterProps> = () => {
   const socialLinks = [
-    { icon: <Linkedin className="w-5 h-5" />, url: 'https://linkedin.com/company/nstsdc', name: 'LinkedIn' },
-    { icon: <Twitter className="w-5 h-5" />, url: 'https://twitter.com/nstsdc', name: 'Twitter' }
+    {
+      icon: <Linkedin className="w-5 h-5" />,
+      url: "https://linkedin.com/company/nstsdc",
+      name: "LinkedIn"
+    },
+    {
+      icon: <Twitter className="w-5 h-5" />,
+      url: "https://twitter.com/nstsdc",
+      name: "Twitter"
+    }
   ];
 
   const quickLinks = [
-    { name: 'About Us', url: '/about' },
-    { name: 'Events', url: '/events' },
-    { name: 'Contact Us', url: '/contact' }
+    { name: "About Us", url: "/about" },
+    { name: "Events", url: "/events" },
+    { name: "Contact Us", url: "/contact" }
   ];
 
   return (
@@ -31,16 +39,19 @@ const Footer: React.FC<FooterProps> = ({ copyright, links }) => {
               </span>
             </Link>
             <p className="text-sm text-gray-400">
-              Empowering developers to build the future through collaboration, innovation, and continuous learning.
+              Empowering developers to build the future through collaboration,
+              innovation, and continuous learning.
             </p>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     to={link.url}
                     className="text-gray-400 hover:text-indigo-400 transition-colors"
                   >
@@ -52,7 +63,9 @@ const Footer: React.FC<FooterProps> = ({ copyright, links }) => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Connect With Us</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">
+              Connect With Us
+            </h3>
             <div className="flex justify-center space-x-4">
               {socialLinks.map((social) => (
                 <a
@@ -69,9 +82,9 @@ const Footer: React.FC<FooterProps> = ({ copyright, links }) => {
             </div>
             <div className="mt-4">
               <p className="text-sm text-gray-400">
-                Contact us at:{' '}
-                <a 
-                  href="partnerships@influenz.co.in" 
+                Contact us at:{" "}
+                <a
+                  href={`mailto:partnerships@influenz.co.in`}
                   className="text-indigo-400 hover:text-indigo-300"
                 >
                   partnerships@influenz.co.in
