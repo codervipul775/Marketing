@@ -39,7 +39,7 @@ const Contact = () => {
     try {
       validateForm(data);
 
-      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+      const API_URL = import.meta.env.VITE_API_URL || 'https://api.influenz.co.in';
       const response = await fetch(`${API_URL}/api/contact`, {
         credentials: 'omit',
         method: 'POST',
