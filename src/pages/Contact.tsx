@@ -6,22 +6,42 @@ const Contact = () => {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
+  const validateForm = (data: { name: string; email: string; subject: string; message: string }) => {
+    if (!data.name || data.name.trim().length < 2) {
+      throw new Error('Please enter a valid name (at least 2 characters)');
+    }
+    if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+      throw new Error('Please enter a valid email address');
+    }
+    if (!data.subject || data.subject.trim().length < 3) {
+      throw new Error('Please enter a subject (at least 3 characters)');
+    }
+    if (!data.message || data.message.trim().length < 10) {
+      throw new Error('Please enter a message (at least 10 characters)');
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
     setError(null);
+    setSuccess(false);
     
     const form = e.currentTarget;
     const formData = new FormData(form);
     const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      subject: formData.get('subject'),
-      message: formData.get('message')
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      subject: formData.get('subject') as string,
+      message: formData.get('message') as string
     };
 
     try {
-      const response = await fetch('http://localhost:3001/api/contact', {
+      validateForm(data);
+
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+      const response = await fetch(`${API_URL}/api/contact`, {
+        credentials: 'omit',
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -30,13 +50,14 @@ const Contact = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || `Failed to send message: ${response.status}`);
       }
-
+      
       setSuccess(true);
       form.reset();
     } catch (err) {
-      setError('Failed to send message. Please try again later.');
+      setError(err instanceof Error ? err.message : 'Failed to send message. Please try again later.');
     } finally {
       setIsLoading(false);
     }
@@ -56,7 +77,7 @@ const Contact = () => {
     required?: boolean;
   }) => (
     <div>
-      <label htmlFor={name} className="block text-sm font-medium text-gray-300">
+      <label htmlFor={name} className="block text-sm font-medium text-gray-700">
         {label}
       </label>
       <div className="mt-1 relative">
@@ -66,7 +87,7 @@ const Contact = () => {
           id={name}
           placeholder={placeholder}
           required={required}
-          className="block w-full px-4 py-3 rounded-lg border bg-white/5 border-white/10 text-gray-300 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm"
+          className="block w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm"
         />
       </div>
     </div>
@@ -85,10 +106,8 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="lg:col-span-2">
-            <div className="bg-slate-800 backdrop-blur-xl shadow-lg rounded-xl p-8 sm:p-10 border border-white/10">
+            <div className="bg-white shadow-lg rounded-xl p-8 sm:p-10 border border-gray-200">
               <form
-                action="https://formsubmit.co/partnerships@influenz.co.in"
-                method="POST"
                 onSubmit={handleSubmit}
                 className="space-y-8"
                 autoComplete="off"
@@ -129,17 +148,19 @@ const Contact = () => {
                       rows={4}
                       placeholder="Your message"
                       required
-                      className="block w-full px-4 py-3 rounded-lg border bg-white/5 border-white/10 text-gray-300 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm"
+                      className="block w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-6">
                   {error && (
-                    <div className="text-red-500 text-sm text-center">{error}</div>
+                    <div className="p-3 rounded-lg bg-red-50 border border-red-200 text-red-600 text-sm text-center">
+                      {error}
+                    </div>
                   )}
                   {success && (
-                    <div className="text-green-500 text-sm text-center">
+                    <div className="p-3 rounded-lg bg-green-50 border border-green-200 text-green-600 text-sm text-center">
                       Message sent successfully! We'll get back to you soon.
                     </div>
                   )}
@@ -163,23 +184,23 @@ const Contact = () => {
           </div>
 
           <div className="lg:col-span-1">
-            <div className="bg-slate-800 backdrop-blur-xl shadow-lg rounded-xl p-8 sm:p-10 space-y-10 border border-white/10">
-              <h3 className="text-2xl font-semibold text-white">
+            <div className="bg-white shadow-lg rounded-xl p-8 sm:p-10 space-y-10 border border-gray-200">
+              <h3 className="text-2xl font-semibold text-gray-900">
                 Contact Information
               </h3>
 
               <div className="space-y-8">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 mt-1">
-                    <Mail className="h-6 w-6 text-indigo-400" />
+                    <Mail className="h-6 w-6 text-indigo-600" />
                   </div>
                   <div>
-                    <h4 className="text-base font-medium text-gray-300 mb-1">
+                    <h4 className="text-base font-medium text-gray-700 mb-1">
                       Email
                     </h4>
                     <a
                       href={`mailto:partnerships@influenz.co.in`}
-                      className="text-base text-indigo-400 hover:text-indigo-300"
+                      className="text-base text-indigo-600 hover:text-indigo-500"
                     >
                       partnerships@influenz.co.in
                     </a>
@@ -188,24 +209,24 @@ const Contact = () => {
 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 mt-1">
-                    <Phone className="h-6 w-6 text-indigo-400" />
+                    <Phone className="h-6 w-6 text-indigo-600" />
                   </div>
                   <div>
-                    <h4 className="text-base font-medium text-gray-300 mb-1">
+                    <h4 className="text-base font-medium text-gray-700 mb-1">
                       Phone
                     </h4>
                     <a
                       href="tel:+919058522239"
-                      className="text-base text-indigo-400 hover:text-indigo-300"
+                      className="text-base text-indigo-600 hover:text-indigo-500"
                     >
-                      9058522239
+                      +91 90585 22239
                     </a>
                     <br />
                     <a
                       href="tel:+916239183525"
-                      className="text-base text-indigo-400 hover:text-indigo-300"
+                      className="text-base text-indigo-600 hover:text-indigo-500"
                     >
-                      6239183525
+                      +91 62391 83525
                     </a>
                   </div>
                 </div>

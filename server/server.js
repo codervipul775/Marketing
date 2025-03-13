@@ -2,11 +2,6 @@ import express from 'express';
 import nodemailer from 'nodemailer';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 dotenv.config();
 
@@ -18,10 +13,12 @@ const {
   SMTP_PASS,
   FROM_NAME,
   REPLY_TO,
+  ALLOWED_ORIGINS,
   PORT: ENV_PORT
 } = globalThis.process.env;
 
 const app = express();
+// Configure CORS and basic middleware
 app.use(cors());
 app.use(express.json());
 
@@ -64,7 +61,32 @@ const createAutoResponseTemplate = (name) => `
   </div>
 `;
 
-app.post('/api/contact', async (req, res) => {
+// Input validation middleware
+const validateContactInput = (req, res, next) => {
+  const { name, email, subject, message } = req.body;
+  
+  if (!name || name.trim().length < 2) {
+    return res.status(400).json({ error: 'Please enter a valid name (at least 2 characters)' });
+  }
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return res.status(400).json({ error: 'Please enter a valid email address' });
+  }
+  if (!subject || subject.trim().length < 3) {
+    return res.status(400).json({ error: 'Please enter a subject (at least 3 characters)' });
+  }
+  if (!message || message.trim().length < 10) {
+    return res.status(400).json({ error: 'Please enter a message (at least 10 characters)' });
+  }
+  next();
+};
+
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok' });
+});
+
+// Contact form endpoint
+app.post('/api/contact', validateContactInput, async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   try {
@@ -88,12 +110,31 @@ app.post('/api/contact', async (req, res) => {
 
     res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
-    globalThis.console.error('Error sending email:', error);
-    res.status(500).json({ error: 'Failed to send email' });
+    console.error('Error sending email:', error);
+    const errorMessage = globalThis.process.env.NODE_ENV === 'production' 
+      ? 'Failed to send email' 
+      : error.message;
+    res.status(500).json({ error: errorMessage });
   }
 });
 
+// Error handling middleware
+app.use((err, req, res) => {
+  console.error('Unhandled error:', err);
+  res.status(500).json({ error: 'An unexpected error occurred. Please try again later.' });
+});
+
+// Graceful shutdown
+// Handle graceful shutdown
+globalThis.process.on('SIGTERM', () => {
+  console.log('Received SIGTERM. Performing graceful shutdown...');
+  server.close(() => {
+    console.log('Server closed. Exiting process.');
+    globalThis.process.exit(0);
+  });
+});
+
 const PORT = ENV_PORT || 3001;
-app.listen(PORT, () => {
-  globalThis.console.log(`Server running on port ${PORT}`);
+const server = app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
