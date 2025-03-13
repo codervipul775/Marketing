@@ -2,12 +2,6 @@ import express from 'express';
 import nodemailer from 'nodemailer';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-import rateLimit from 'express-rate-limit';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 dotenv.config();
 
@@ -24,40 +18,9 @@ const {
 } = globalThis.process.env;
 
 const app = express();
-// Configure CORS
-app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'http://127.0.0.1:3000',
-    'https://influenz.co.in',
-    'https://www.influenz.co.in'
-  ],
-  methods: ['POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type'],
-  credentials: false
-}));
-
-// Rate limiting
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 5, // Limit each IP to 5 requests per windowMs
-  message: { error: 'Too many requests, please try again later.' }
-});
-
-// Apply rate limiting to contact endpoint
-app.use('/api/contact', limiter);
-
-// Body parser with size limit
-app.use(express.json({ limit: '10kb' }));
-
-// Add security headers
-app.use((req, res, next) => {
-  res.setHeader('X-Content-Type-Options', 'nosniff');
-  res.setHeader('X-Frame-Options', 'DENY');
-  res.setHeader('X-XSS-Protection', '1; mode=block');
-  res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
-  next();
-});
+// Configure CORS and basic middleware
+app.use(cors());
+app.use(express.json());
 
 const emailConfig = {
   host: SMTP_HOST,
