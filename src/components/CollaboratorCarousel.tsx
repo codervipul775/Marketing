@@ -1,4 +1,3 @@
-import React from 'react';
 
 const logos = [
   'https://media.licdn.com/dms/image/v2/C4E0BAQFh3inqhmvjwA/company-logo_200_200/company-logo_200_200/0/1630630259001?e=2147483647&v=beta&t=9i30cprPVucw3gy6-y7JrjD6o-rnY22FxyO9Yd2wDzs',

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Instagram, Twitter, Youtube, Globe, Mail, Linkedin } from 'lucide-react';
 import Modal from '../components/Modal';
 
