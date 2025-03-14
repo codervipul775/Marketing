@@ -21,12 +21,12 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
     setError(null);
     setSuccess(false);
-    
+
     const form = e.currentTarget;
     const formData = new FormData(form);
     const data = {
@@ -39,9 +39,9 @@ const Contact = () => {
     try {
       validateForm(data);
 
-      const API_URL = import.meta.env.VITE_API_URL || 'https://api.influenz.co.in';
+      const API_URL = import.meta.env.VITE_API_URL || 'https://api.influenz.co.in';  // Define API_URL here
       console.log("API_URL: " + API_URL);
-      const response = await fetch(`https://api.influenz.co.in/api/contact`, {
+      const response = await fetch(`${API_URL}/contact`, {
         credentials: 'omit',
         method: 'POST',
         headers: {
@@ -54,7 +54,7 @@ const Contact = () => {
         const errorData = await response.json().catch(() => ({}));
         throw new Error(errorData.error || `Failed to send message: ${response.status}`);
       }
-      
+
       setSuccess(true);
       form.reset();
     } catch (err) {
