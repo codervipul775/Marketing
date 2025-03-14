@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Calendar, MapPin, Users, Link as LinkIcon, X } from 'lucide-react';
+import { MapPin, Users, Link as LinkIcon, X } from 'lucide-react'; // Removed unused Calendar
+import { Calendar } from 'lucide-react'; // Added Calendar to test
 
 interface Event {
   id: number;
@@ -90,7 +91,7 @@ const Events = () => {
       category: "Theatre",
       attendees: 50000,
       description: "Master the art of creating engaging content for multiple platforms.",
-      image: "https://images.unsplash.com/photo-1477281765962-ef34e8bb0967?q=80&w=3133&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "https://images.unsplash.com/photo-1477281765962-ef34e8bb0967?q=80&w=3133&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D",
       longDescription: "Histrionica is the esteemed annual theatre festival of Shri Ram College of Commerce (SRCC), celebrated for its rich tradition of theatrical excellence and cultural significance. Over the years, the festival has served as a vibrant platform for thespians and artists, drawing attention from theatre enthusiasts nationwide",
       Guests: [
         "Farhan Akhtar",
