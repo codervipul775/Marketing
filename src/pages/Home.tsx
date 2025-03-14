@@ -142,19 +142,25 @@ const Home = () => {
   return (
     <div className="w-screen">
       {/* Hero Section */}
-      <section className="w-screen py-20 bg-no-repeat backdrop-contrast-70 bg-cover bg-right h-[60vh] bg-white ">
+      <section className="relative w-screen min-h-[80vh] py-20 bg-gradient-to-r from-white via-white to-yellow-50">
         <div className="container mx-auto px-4">
-          <div className="text-center flex">
-            <div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-8 text-black bg-clip-text ">
-              Elevate Your Influence with <span className='text-yellow-500'>INFLUENZ</span>
-            </h1>
-           
-            <p className="text-black text-lg md:text-xl mb-8 max-w-2xl w-15 drop-shadow-xs mx-auto mt-6">
-            Unlock the full potential of influencer marketing and connect with your audience like never before. Drive impact, build trust, and grow your brand effortlessly! 
-            </p>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="flex-1 text-left md:max-w-2xl">
+              <h1 className="text-4xl text-center md:text-6xl font-bold mb-6 text-black">
+                Elevate Your Influence with <span className="text-yellow-500 inline-block animate-pulse">INFLUENZ</span>
+              </h1>
+              <p className="text-slate-700 text-center text-lg md:text-xl mb-8 leading-relaxed">
+                Unlock the full potential of influencer marketing and connect with your audience like never before. Drive impact, build trust, and grow your brand effortlessly!
+              </p>
             </div>
-            <img src='https://media-hosting.imagekit.io//f4d7ce963d5e4343/an-isometric-digital-illustration-repres_PMUSlDDlSrmgqJuzvFJlSg_6RlXR3veRdWpHWtyOWgVNw-removebg-preview.png?Expires=1836399204&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=id9prKV3N8UayhfpajV~dQLsMol9ipKwHmmpr8cptolu3HB-ajNxESZX6yc~SwxnYIfiXfTO050jRGd55cbnH0-ULdgU8R9PX77GkDtds8-xIE9YOe13n5NtxkDjlrjOW49CfI8q3Pliw~vh0JLAPCEDxvwqi-8469bXY5cu4pLFe59nqawV4jXnEMNwKYOTXwvkAP4f-9PJ0KK6tsjCWDvFB-rmXqwWnQ7XGQYVGJQZd1BEWZoyuQgtvkuIHBug8YEdgTZe~X1bdtrzNbG9wckchPG3IpKUDU7Ngtwivqg-jYjAAzbWNSkxxWXU5QLidKJFjf1NIdeaUXc7NnOfJA__' alt="Influenz" className="mx-auto w-1/3" />
+            <div className="flex-1 relative">
+              <img 
+                src='https://media-hosting.imagekit.io//f4d7ce963d5e4343/an-isometric-digital-illustration-repres_PMUSlDDlSrmgqJuzvFJlSg_6RlXR3veRdWpHWtyOWgVNw-removebg-preview.png?Expires=1836399204&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=id9prKV3N8UayhfpajV~dQLsMol9ipKwHmmpr8cptolu3HB-ajNxESZX6yc~SwxnYIfiXfTO050jRGd55cbnH0-ULdgU8R9PX77GkDtds8-xIE9YOe13n5NtxkDjlrjOW49CfI8q3Pliw~vh0JLAPCEDxvwqi-8469bXY5cu4pLFe59nqawV4jXnEMNwKYOTXwvkAP4f-9PJ0KK6tsjCWDvFB-rmXqwWnQ7XGQYVGJQZd1BEWZoyuQgtvkuIHBug8YEdgTZe~X1bdtrzNbG9wckchPG3IpKUDU7Ngtwivqg-jYjAAzbWNSkxxWXU5QLidKJFjf1NIdeaUXc7NnOfJA__' 
+                alt="Influenz Marketing" 
+                className="w-full max-w-lg mx-auto transform hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-transparent to-transparent pointer-events-none" />
+            </div>
           </div>
         </div>
       </section>

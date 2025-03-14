@@ -139,12 +139,6 @@ const Events = () => {
                       alt={event.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="text-yellow-500 text-sm font-medium">
-                        View Details
-                      </div>
-                    </div>
                   </div>
 
                   <div className={`p-6 md:p-8 md:w-2/3 flex flex-col ${index % 2 === 1 ? 'md:items-end md:text-right' : ''}`}>
@@ -152,8 +146,6 @@ const Events = () => {
                       <div className="bg-indigo-600/10 text-blue-700 px-3 py-1 rounded-full text-sm">
                         {event.category}
                       </div>
-                      <div className="h-1.5 w-1.5 rounded-full bg-slate-600" />
-
                     </div>
 
                     <h3 className="text-2xl font-bold text-gray-800 mt-4">
