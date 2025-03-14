@@ -18,7 +18,7 @@ const {
 
 const app = express();
 
-// Parse ALLOWED_ORIGINS into an array
+// Parse ALLOWED_ORIGINS into an array. Handle undefined ALLOWED_ORIGINS gracefully
 const allowedOrigins = ALLOWED_ORIGINS ? ALLOWED_ORIGINS.split(',') : [];
 
 // Configure CORS
@@ -33,14 +33,13 @@ const corsOptions = {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  methods: "POST, OPTIONS",
-  allowedHeaders: "Content-Type",
+  methods: "POST, OPTIONS", // Allow both POST and OPTIONS
+  allowedHeaders: "Content-Type, Authorization", // Add Content-Type to allowed headers
   credentials: true
 };
 
 app.use(cors(corsOptions));
-app.use(express.json());
-
+app.use(express.json()); // Enable JSON body parsing
 const emailConfig = {
   host: SMTP_HOST,
   port: Number(SMTP_PORT),
