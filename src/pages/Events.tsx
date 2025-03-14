@@ -4,7 +4,6 @@ import { Calendar, MapPin, Users, Link as LinkIcon, X } from 'lucide-react';
 interface Event {
   id: number;
   title: string;
-  date: string;
   location: string;
   category: string;
   attendees: number;
@@ -55,12 +54,12 @@ const Events = () => {
       image: "https://www.indiafilings.com/learn/wp-content/uploads/2019/05/Global-Entrepreneurship-Summit.jpg",
       longDescription: "The SRCC Business Conclave is a premier platform that brings together global business icons, policymakers, and industry leaders to discuss emerging trends, economic insights, and the future of business. As Asia’s largest undergraduate management fest, it has built a reputation for hosting visionary leaders and changemakers, attracting thousands of attendees and generating millions of digital impressions. ",
       Guests: [
-        "Nitin Gadkari ",
-        "Naveen Jindal  ",
-        "Swami Mukundananda ",
+        "Nitin Gadkari",
+        "Naveen Jindal",
+        "Swami Mukundananda",
         "Aman Dhattarwal & Shradha Khapra ",
         "Kiran Bedi",
-        "Sundararaman Ramamurthy  ",
+        "Sundararaman Ramamurthy ",
        
   
       ],
@@ -73,34 +72,26 @@ const Events = () => {
     {
       id: 2,
       title: "Crossroads – SRCC's Annual Cultural Extravaganza ",
-      
       location: "SRCC Campus, New Delhi",
       category: "Cultural",
       attendees: 100000,
       description: "Learn how to create and execute successful influencer marketing campaigns.",
       image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      longDescription: "Crossroads, the annual cultural festival of SRCC, is one of North India’s largest college fests, drawing 100,000+ attendees. It features electrifying concerts, thrilling competitions, and star-studded performances, making it a grand celebration of music, art, and entertainment. With an unmatched vibe, Crossroads offers four days of unforgettable energy, creativity, and excitement.
-",
+      longDescription: "Crossroads, the annual cultural festival of SRCC, is one of North India’s largest college fests, drawing 100,000+ attendees. It features electrifying concerts, thrilling competitions, and star-studded performances, making it a grand celebration of music, art, and entertainment. With an unmatched vibe, Crossroads offers four days of unforgettable energy, creativity, and excitement.",
       Guests: [
-       
-      
         "Salim–Sulaiman ",
         "Shankar–Ehsaan–Loy",
-       
         "Papon",
-
       ],
       highlights: [
         "Beyond stellar performances, Crossroads offers many activities, including engaging competitions, vibrant stalls, and a lively fun zone, ensuring a holistic festive experience for all attendees.",
         "The festival attracts many attendees each year, reflecting its popularity and significance in the cultural landscape. "
-
       ]
       
     },
     {
       id: 3,
       title: "Histrionica – SRCC's Annual Theatre Festival ",
-     
       location: "SRCC Campus, New Delhi",
       category: "Theatre",
       attendees: 50000,
@@ -108,21 +99,20 @@ const Events = () => {
       image: "https://images.unsplash.com/photo-1477281765962-ef34e8bb0967?q=80&w=3133&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       longDescription: "Histrionica is the esteemed annual theatre festival of Shri Ram College of Commerce (SRCC), celebrated for its rich tradition of theatrical excellence and cultural significance. Over the years, the festival has served as a vibrant platform for thespians and artists, drawing attention from theatre enthusiasts nationwide",
       Guests: [
-        "Farhan Akhtar ",
-        "Vidya Balan ",
-        "Randeep Hooda ",
-        "Rajkummar Rao ",
+        "Farhan Akhtar",
+        "Vidya Balan",
+        "Randeep Hooda",
+        "Rajkummar Rao",
         "Vinay Pathak",
         "Adil Hussain",
-        "Piyush Mishra ",
+        "Piyush Mishra",
         "Manoj Bajpayee"
       ],
       highlights: [
         "The festival showcases a wide array of theatrical productions, from classic plays to contemporary performances, providing a platform for emerging talent and established artists alike.",
         "Histrionica offers workshops conducted by industry experts, fostering skill development and offering deeper insights into various aspects of theatre, including direction, scriptwriting, and production."
       ]
-      
-    },
+      },
     
   ];
 
@@ -168,7 +158,7 @@ const Events = () => {
                         {event.category}
                       </div>
                       <div className="h-1.5 w-1.5 rounded-full bg-slate-600" />
-                      <div className="text-black text-sm">{event.date}</div>
+                      
                     </div>
 
                     <h3 className="text-2xl font-bold text-gray-800 mt-4">
@@ -228,11 +218,7 @@ const Events = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="flex items-center gap-3 text-gray-400">
-                <Calendar className="w-5 h-5 text-indigo-400 flex-shrink-0" />
-                <span>{selectedEvent.date}</span>
-              </div>
+            
               <div className="flex items-center gap-3 text-gray-400">
                 <MapPin className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                 <span>{selectedEvent.location}</span>
