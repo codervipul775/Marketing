@@ -11,12 +11,12 @@ const Footer: React.FC<FooterProps> = () => {
   const socialLinks = [
     {
       icon: <Linkedin className="w-5 h-5" />,
-      url: "https://linkedin.com/company/nstsdc",
+      url: "https://linkedin.com/company/home",
       name: "LinkedIn"
     },
     {
       icon: <Twitter className="w-5 h-5" />,
-      url: "https://twitter.com/nstsdc",
+      url: "https://twitter.com/home",
       name: "Twitter"
     }
   ];
