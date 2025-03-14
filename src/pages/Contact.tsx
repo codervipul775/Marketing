@@ -41,7 +41,7 @@ const Contact = () => {
 
       const API_URL = import.meta.env.VITE_API_URL || 'https://api.influenz.co.in';
       console.log("API_URL: " + API_URL);
-      const response = await fetch(`${API_URL}/api/contact`, {
+      const response = await fetch(`https://api.influenz.co.in/api/contact`, {
         credentials: 'omit',
         method: 'POST',
         headers: {
