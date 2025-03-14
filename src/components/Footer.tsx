@@ -39,8 +39,7 @@ const Footer: React.FC<FooterProps> = () => {
               </span>
             </Link>
             <p className="text-sm text-gray-400">
-              Empowering developers to build the future through collaboration,
-              innovation, and continuous learning.
+              Elevate your influence with INFLUENZ.
             </p>
           </div>
 
