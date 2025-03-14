@@ -79,7 +79,7 @@ const About = () => {
       ],
       contact: {
         email: "anshpushpak@gmail.com",
-        linkedin: "https://www.linkedin.com/in/ansh-pushpak-701482202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        linkedin: "www.linkedin.com/in/ansh-pushpak-701482202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
       }
     },
     {
@@ -109,7 +109,7 @@ const About = () => {
       ],
       contact: {
         email: "gourav62391@gmail.com",
-        linkedin: "https://www.linkedin.com/in/gourav62391?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        linkedin: "www.linkedin.com/in/gourav62391?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
       }
     }
   ];
