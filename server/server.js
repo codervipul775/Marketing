@@ -5,8 +5,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-// Get environment variables
-const { 
+const {
   SMTP_HOST,
   SMTP_PORT,
   SMTP_USER,
@@ -18,8 +17,24 @@ const {
 } = globalThis.process.env;
 
 const app = express();
-// Configure CORS and basic middleware
-app.use(cors());
+
+// Parse ALLOWED_ORIGINS into an array
+const allowedOrigins = ALLOWED_ORIGINS ? ALLOWED_ORIGINS.split(',') : [];
+
+// Configure CORS
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: "POST, OPTIONS", // Add OPTIONS to the allowed methods
+  allowedHeaders: "Content-Type", // Add Content-Type to allowed headers
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const emailConfig = {
@@ -64,7 +79,7 @@ const createAutoResponseTemplate = (name) => `
 // Input validation middleware
 const validateContactInput = (req, res, next) => {
   const { name, email, subject, message } = req.body;
-  
+
   if (!name || name.trim().length < 2) {
     return res.status(400).json({ error: 'Please enter a valid name (at least 2 characters)' });
   }
@@ -111,8 +126,8 @@ app.post('/api/contact', validateContactInput, async (req, res) => {
     res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
     console.error('Error sending email:', error);
-    const errorMessage = globalThis.process.env.NODE_ENV === 'production' 
-      ? 'Failed to send email' 
+    const errorMessage = globalThis.process.env.NODE_ENV === 'production'
+      ? 'Failed to send email'
       : error.message;
     res.status(500).json({ error: errorMessage });
   }
@@ -125,7 +140,6 @@ app.use((err, req, res) => {
 });
 
 // Graceful shutdown
-// Handle graceful shutdown
 globalThis.process.on('SIGTERM', () => {
   console.log('Received SIGTERM. Performing graceful shutdown...');
   server.close(() => {
