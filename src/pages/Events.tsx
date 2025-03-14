@@ -47,22 +47,21 @@ const Events = () => {
     {
       id: 1,
       title: "SRCC Business Conclave – Asia’s Largest Undergraduate Management Fest",
-      date: "April 2025",
+      
       location: "SRCC Campus, New Delhi",
       category: "Business Conclave",
-      attendees: 50000,
+      attendees: 30000,
       description: "Join industry leaders for a day of insights into the latest digital marketing trends and strategies.",
       image: "https://www.indiafilings.com/learn/wp-content/uploads/2019/05/Global-Entrepreneurship-Summit.jpg",
       longDescription: "The SRCC Business Conclave is a premier platform that brings together global business icons, policymakers, and industry leaders to discuss emerging trends, economic insights, and the future of business. As Asia’s largest undergraduate management fest, it has built a reputation for hosting visionary leaders and changemakers, attracting thousands of attendees and generating millions of digital impressions. ",
       Guests: [
-        "Nitin Gadkari – Union Minister for Road Transport and Highways, sharing insights on India’s infrastructure and economic development.",
-        "Naveen Jindal – Industrialist and philanthropist, speaking on leadership, innovation, and sustainability. ",
-        "Swami Mukundananda – Spiritual leader, discussing the intersection of business, ethics, and personal development. ",
-        "Aman Dhattarwal & Shradha Khapra – Visionary entrepreneurs and educators, engaging in discussions on innovation and career growth.",
-        "Raj Shamani – Digital content creator and entrepreneur, sharing insights on personal branding and business scaling.",
-        "Kiran Bedi – India’s first female IPS officer, addressing leadership and governance in modern India. ",
-        "Sundararaman Ramamurthy – MD & CEO of BSE, offering expert analysis on financial markets and global economic trends. ",
-        "Ankur Warikoo – Entrepreneur and author, delivering actionable insights on business, productivity, and digital influence. "
+        "Nitin Gadkari ",
+        "Naveen Jindal  ",
+        "Swami Mukundananda ",
+        "Aman Dhattarwal & Shradha Khapra ",
+        "Kiran Bedi",
+        "Sundararaman Ramamurthy  ",
+       
   
       ],
       highlights: [
@@ -74,25 +73,26 @@ const Events = () => {
     {
       id: 2,
       title: "Crossroads – SRCC's Annual Cultural Extravaganza ",
-      date: "March 2025",
+      
       location: "SRCC Campus, New Delhi",
       category: "Cultural",
-      attendees: 50000,
+      attendees: 100000,
       description: "Learn how to create and execute successful influencer marketing campaigns.",
       image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      longDescription: "Master the art of influencer marketing in this intensive workshop. Learn how to identify the right influencers, create compelling campaigns, and measure success. Perfect for marketing professionals looking to enhance their influencer marketing strategies.",
+      longDescription: "Crossroads, the annual cultural festival of SRCC, is one of North India’s largest college fests, drawing 100,000+ attendees. It features electrifying concerts, thrilling competitions, and star-studded performances, making it a grand celebration of music, art, and entertainment. With an unmatched vibe, Crossroads offers four days of unforgettable energy, creativity, and excitement.
+",
       Guests: [
-        "Arijit Singh: The acclaimed playback singer captivated audiences with his soulful melodies, creating an unforgettable musical experience. ",
-        "Sunidhi Chauhan: Known for her powerful vocals and dynamic stage presence, Sunidhi delivered an electrifying performance that left the crowd enthralled. ",
-        "Salim–Sulaiman: The renowned composer duo brought their unique fusion of traditional and contemporary music to the stage, engaging the audience with their innovative compositions. ",
-        "Shankar–Ehsaan–Loy: This iconic trio showcased their musical versatility, delivering a performance that resonated with attendees of all ages. ",
-        "Farhan Akhtar: The multi-talented artist entertained the crowd with his energetic performance, blending rock music with his charismatic persona. ",
-        "Papon: The folk-fusion singer added a unique flavor to the festival with his soulful renditions and engaging stage presence. ",
+       
+      
+        "Salim–Sulaiman ",
+        "Shankar–Ehsaan–Loy",
+       
+        "Papon",
 
       ],
       highlights: [
-        "Diverse Attractions: Beyond stellar performances, Crossroads offers a plethora of activities, including engaging competitions, vibrant stalls, and a lively fun zone, ensuring a holistic festive experience for all attendees.",
-        "Massive Attendance: The festival attracts a large number of attendees each year, reflecting its popularity and significance in the cultural landscape. "
+        "Beyond stellar performances, Crossroads offers many activities, including engaging competitions, vibrant stalls, and a lively fun zone, ensuring a holistic festive experience for all attendees.",
+        "The festival attracts many attendees each year, reflecting its popularity and significance in the cultural landscape. "
 
       ]
       
@@ -100,7 +100,7 @@ const Events = () => {
     {
       id: 3,
       title: "Histrionica – SRCC's Annual Theatre Festival ",
-      date: "2025",
+     
       location: "SRCC Campus, New Delhi",
       category: "Theatre",
       attendees: 50000,
@@ -108,18 +108,18 @@ const Events = () => {
       image: "https://images.unsplash.com/photo-1477281765962-ef34e8bb0967?q=80&w=3133&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       longDescription: "Histrionica is the esteemed annual theatre festival of Shri Ram College of Commerce (SRCC), celebrated for its rich tradition of theatrical excellence and cultural significance. Over the years, the festival has served as a vibrant platform for thespians and artists, drawing attention from theatre enthusiasts nationwide",
       Guests: [
-        "Farhan Akhtar – Renowned actor and filmmaker, who interacted with students, sharing insights into the art of storytelling.",
-        "Vidya Balan – Celebrated actress known for her versatile roles, who engaged in discussions about the evolving landscape of Indian cinema.",
-        "Randeep Hooda – Acclaimed actor, who participated in interactive sessions, offering perspectives on method acting and character development.",
-        "Rajkummar Rao – Versatile actor, who shared his journey in the film industry, inspiring budding actors",
-        "Vinay Pathak – Noted actor and theatre artist, who conducted workshops, enriching the theatrical experience for participants.",
-        "Adil Hussain – Esteemed actor, who engaged with students, discussing the nuances of theatre and cinema.",
-        "Piyush Mishra – Renowned actor, singer, and lyricist, who captivated audiences with his multifaceted talents.",
-        "Manoj Bajpayee – Critically acclaimed actor, who shared his experiences and insights into the craft of acting."
+        "Farhan Akhtar ",
+        "Vidya Balan ",
+        "Randeep Hooda ",
+        "Rajkummar Rao ",
+        "Vinay Pathak",
+        "Adil Hussain",
+        "Piyush Mishra ",
+        "Manoj Bajpayee"
       ],
       highlights: [
-        "Diverse Performances: The festival showcases a wide array of theatrical productions, from classic plays to contemporary performances, providing a platform for emerging talent and established artists alike.",
-        "Workshops and Interactive Sessions: Histrionica offers workshops conducted by industry experts, fostering skill development and offering deeper insights into various aspects of theatre, including direction, scriptwriting, and production. "
+        "The festival showcases a wide array of theatrical productions, from classic plays to contemporary performances, providing a platform for emerging talent and established artists alike.",
+        "Histrionica offers workshops conducted by industry experts, fostering skill development and offering deeper insights into various aspects of theatre, including direction, scriptwriting, and production."
       ]
       
     },
@@ -134,9 +134,7 @@ const Events = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-black  bg-clip-text">
             Our Events
           </h1>
-          <p className="text-gray-400 text-lg md:text-xl text-center mb-12 max-w-2xl mx-auto">
-            Join us for exciting marketing events, workshops, and conferences
-          </p>
+          
         </div>
       </section>
 
