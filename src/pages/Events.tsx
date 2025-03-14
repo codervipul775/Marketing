@@ -19,15 +19,15 @@ const Modal = ({ isOpen, onClose, children }: { isOpen: boolean; onClose: () => 
   if (!isOpen) return null;
 
   return (
-    <div 
+    <div
       className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
       onClick={onClose}
     >
-      <div 
+      <div
         className="relative bg-gradient-to-b from-slate-800 to-slate-900 rounded-xl p-8 max-w-3xl w-full shadow-2xl transform transition-all duration-300 scale-100 opacity-100 animate-modalIn overflow-y-auto max-h-[90vh]"
         onClick={e => e.stopPropagation()}
       >
-        <button 
+        <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-slate-700/50 p-2"
         >
@@ -46,7 +46,6 @@ const Events = () => {
     {
       id: 1,
       title: "SRCC Business Conclave – Asia’s Largest Undergraduate Management Fest",
-      
       location: "SRCC Campus, New Delhi",
       category: "Business Conclave",
       attendees: 30000,
@@ -60,14 +59,10 @@ const Events = () => {
         "Aman Dhattarwal & Shradha Khapra ",
         "Kiran Bedi",
         "Sundararaman Ramamurthy ",
-       
-  
       ],
       highlights: [
         "With a massive digital reach and a strong industry presence, the SRCC Business Conclave continues to shape conversations that influence the future of business and policy, making it a must-attend event for aspiring professionals and corporate leaders alike."
-
       ]
-      
     },
     {
       id: 2,
@@ -87,7 +82,6 @@ const Events = () => {
         "Beyond stellar performances, Crossroads offers many activities, including engaging competitions, vibrant stalls, and a lively fun zone, ensuring a holistic festive experience for all attendees.",
         "The festival attracts many attendees each year, reflecting its popularity and significance in the cultural landscape. "
       ]
-      
     },
     {
       id: 3,
@@ -112,8 +106,8 @@ const Events = () => {
         "The festival showcases a wide array of theatrical productions, from classic plays to contemporary performances, providing a platform for emerging talent and established artists alike.",
         "Histrionica offers workshops conducted by industry experts, fostering skill development and offering deeper insights into various aspects of theatre, including direction, scriptwriting, and production."
       ]
-      },
-    
+    },
+
   ];
 
   return (
@@ -124,7 +118,7 @@ const Events = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-black  bg-clip-text">
             Our Events
           </h1>
-          
+
         </div>
       </section>
 
@@ -151,14 +145,14 @@ const Events = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className={`p-6 md:p-8 md:w-2/3 flex flex-col ${index % 2 === 1 ? 'md:items-end md:text-right' : ''}`}>
                     <div className={`flex items-center gap-3 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                       <div className="bg-indigo-600/10 text-blue-700 px-3 py-1 rounded-full text-sm">
                         {event.category}
                       </div>
                       <div className="h-1.5 w-1.5 rounded-full bg-slate-600" />
-                      
+
                     </div>
 
                     <h3 className="text-2xl font-bold text-gray-800 mt-4">
@@ -179,9 +173,9 @@ const Events = () => {
                         <span>{event.attendees} Attendees</span>
                       </div>
                     </div>
-                  
+
                     <div className={`flex items-center gap-4 mt-6 ${index % 2 === 1 ? 'md:justify-end' : ''}`}>
-                      <button 
+                      <button
                         onClick={() => setSelectedEvent(event)}
                         className="bg-slate-700/50 text-white py-3 px-6 rounded-xl hover:bg-slate-700 transition-colors flex items-center gap-2"
                       >
@@ -218,7 +212,7 @@ const Events = () => {
               </div>
             </div>
 
-            
+            <div>
               <div className="flex items-center gap-3 text-gray-400">
                 <MapPin className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                 <span>{selectedEvent.location}</span>
@@ -248,21 +242,21 @@ const Events = () => {
                     ))}
                   </ul>
                 </div>
-                
+
               )}
 
               {selectedEvent.highlights && (
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Highlights</h3>
                   <ul className="space-y-2">
-                    {selectedEvent.highlights.map((speaker, index) => (
+                    {selectedEvent.highlights.map((highlight, index) => (
                       <li key={index} className="text-gray-400">
-                        • {speaker}
+                        • {highlight}
                       </li>
                     ))}
                   </ul>
                 </div>
-                
+
               )}
 
               {selectedEvent.agenda && (
