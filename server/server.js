@@ -109,7 +109,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // Contact form endpoint
-app.post('/api/contact', validateContactInput, async (req, res) => {
+app.post('/contact', validateContactInput, async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   try {
