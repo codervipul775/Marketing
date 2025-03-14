@@ -17,11 +17,8 @@ const {
 } = globalThis.process.env;
 
 const app = express();
-
-// Parse ALLOWED_ORIGINS into an array. Handle undefined ALLOWED_ORIGINS gracefully
 const allowedOrigins = ALLOWED_ORIGINS ? ALLOWED_ORIGINS.split(',') : [];
 
-// Configure CORS
 const corsOptions = {
   origin: (origin, callback) => {
     console.log("Origin received:", origin); // Log the origin
@@ -35,22 +32,36 @@ const corsOptions = {
   },
   methods: "POST, OPTIONS", // Allow both POST and OPTIONS
   allowedHeaders: "Content-Type, Authorization", // Add Content-Type to allowed headers
-  credentials: true
+  credentials: false // Remove credentials unless absolutely needed
 };
 
 app.use(cors(corsOptions));
-app.use(express.json()); // Enable JSON body parsing
+app.use(express.json());
+
 const emailConfig = {
   host: SMTP_HOST,
   port: Number(SMTP_PORT),
-  secure: true,
+  secure: true, // Or false for STARTTLS, see notes above
   auth: {
     user: SMTP_USER,
     pass: SMTP_PASS,
   },
+  tls: {
+       rejectUnauthorized: false // ONLY FOR DEVELOPMENT, REMOVE IN PRODUCTION.
+  },
 };
 
+console.log("Email config: ", emailConfig); // Log email configuration
+
 const transporter = nodemailer.createTransport(emailConfig);
+
+transporter.verify(function(error, success) { // Verify transporter
+  if (error) {
+    console.log("Transporter verify error:", error);
+  } else {
+    console.log("Transporter is ready to take messages");
+  }
+});
 
 const createEmailTemplate = (name, email, subject, message) => `
   <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -79,7 +90,6 @@ const createAutoResponseTemplate = (name) => `
   </div>
 `;
 
-// Input validation middleware
 const validateContactInput = (req, res, next) => {
   const { name, email, subject, message } = req.body;
   console.log("Received contact form data:", { name, email, subject, message });
@@ -103,19 +113,17 @@ const validateContactInput = (req, res, next) => {
   next();
 };
 
-// Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-// Contact form endpoint
 app.post('/contact', validateContactInput, async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   try {
     console.log("Attempting to send email...");
     // Send notification email to admin
-    await transporter.sendMail({
+    const infoToAdmin = await transporter.sendMail({
       from: `"${FROM_NAME}" <${SMTP_USER}>`,
       to: REPLY_TO,
       replyTo: email,
@@ -123,14 +131,18 @@ app.post('/contact', validateContactInput, async (req, res) => {
       html: createEmailTemplate(name, email, subject, message),
     });
 
+    console.log("Email sent to admin: %s", infoToAdmin.messageId);
+
     // Send auto-response to the sender
-    await transporter.sendMail({
+    const infoToSender = await transporter.sendMail({
       from: `"${FROM_NAME}" <${SMTP_USER}>`,
       to: email,
       replyTo: REPLY_TO,
       subject: 'Thank you for your message',
       html: createAutoResponseTemplate(name),
     });
+
+    console.log("Email sent to sender: %s", infoToSender.messageId);
 
     console.log("Email sent successfully!");
     res.status(200).json({ message: 'Email sent successfully' });
@@ -143,13 +155,11 @@ app.post('/contact', validateContactInput, async (req, res) => {
   }
 });
 
-// Error handling middleware
 app.use((err, req, res) => {
   console.error('Unhandled error:', err);
   res.status(500).json({ error: 'An unexpected error occurred. Please try again later.' });
 });
 
-// Graceful shutdown
 globalThis.process.on('SIGTERM', () => {
   console.log('Received SIGTERM. Performing graceful shutdown...');
   server.close(() => {
