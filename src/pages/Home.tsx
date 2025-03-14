@@ -147,7 +147,7 @@ const Home = () => {
           <div className="text-center flex">
             <div>
             <h1 className="text-4xl md:text-6xl font-bold mb-8 text-black bg-clip-text ">
-              Transform Your Brand with <span className='text-yellow-500'>Influenz</span>.
+              Elevate Your Influence with <span className='text-yellow-500'>INFLUENZ</span>.
             </h1>
            
             <p className="text-black text-lg md:text-xl mb-8 max-w-2xl w-15 drop-shadow-xs mx-auto mt-6">
