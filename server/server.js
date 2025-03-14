@@ -24,14 +24,18 @@ const allowedOrigins = ALLOWED_ORIGINS ? ALLOWED_ORIGINS.split(',') : [];
 // Configure CORS
 const corsOptions = {
   origin: (origin, callback) => {
+    console.log("Origin received:", origin); // Log the origin
     if (!origin || allowedOrigins.includes(origin)) {
+      console.log("CORS allowed for:", origin); // Log when CORS is allowed
       callback(null, true);
     } else {
+      console.log("CORS blocked for:", origin, "Allowed origins:", allowedOrigins); // Log when CORS is blocked
       callback(new Error('Not allowed by CORS'));
     }
   },
-  methods: "POST, OPTIONS", // Add OPTIONS to the allowed methods
-  allowedHeaders: "Content-Type", // Add Content-Type to allowed headers
+  methods: "POST, OPTIONS",
+  allowedHeaders: "Content-Type",
+  credentials: true
 };
 
 app.use(cors(corsOptions));
@@ -79,17 +83,22 @@ const createAutoResponseTemplate = (name) => `
 // Input validation middleware
 const validateContactInput = (req, res, next) => {
   const { name, email, subject, message } = req.body;
+  console.log("Received contact form data:", { name, email, subject, message });
 
   if (!name || name.trim().length < 2) {
+    console.log("Validation failed: Name is invalid");
     return res.status(400).json({ error: 'Please enter a valid name (at least 2 characters)' });
   }
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    console.log("Validation failed: Email is invalid");
     return res.status(400).json({ error: 'Please enter a valid email address' });
   }
   if (!subject || subject.trim().length < 3) {
+    console.log("Validation failed: Subject is invalid");
     return res.status(400).json({ error: 'Please enter a subject (at least 3 characters)' });
   }
   if (!message || message.trim().length < 10) {
+    console.log("Validation failed: Message is invalid");
     return res.status(400).json({ error: 'Please enter a message (at least 10 characters)' });
   }
   next();
@@ -105,6 +114,7 @@ app.post('/api/contact', validateContactInput, async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   try {
+    console.log("Attempting to send email...");
     // Send notification email to admin
     await transporter.sendMail({
       from: `"${FROM_NAME}" <${SMTP_USER}>`,
@@ -123,6 +133,7 @@ app.post('/api/contact', validateContactInput, async (req, res) => {
       html: createAutoResponseTemplate(name),
     });
 
+    console.log("Email sent successfully!");
     res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
     console.error('Error sending email:', error);
