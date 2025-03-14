@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Users, Link as LinkIcon, X } from 'lucide-react'; // Removed unused Calendar
-import { Calendar } from 'lucide-react'; // Added Calendar to test
+
 
 interface Event {
   id: number;
