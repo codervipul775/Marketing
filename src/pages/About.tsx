@@ -133,7 +133,7 @@ const About = () => {
       <section className="py-2">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-l from-gray-500 to-gray-100 bg-transparent/40 rounded-2xl p-8  transition-colors">
+            <div className="bg-gradient-to-l from-yellow-400 to-yellow-100 bg-transparent/40 rounded-2xl p-8  transition-colors">
               <div className="w-12 h-12 bg-indigo-600/10 rounded-xl flex items-center justify-center mb-6">
                 <Rocket className="w-6 h-6 text-indigo-400" />
               </div>
@@ -143,7 +143,7 @@ const About = () => {
                 drive growth and create lasting impact.
               </p>
             </div>
-            <div className="bg-gradient-to-l from-gray-500 to-gray-100 bg-transparent/40 rounded-2xl p-8  transition-colors">
+            <div className="bg-gradient-to-l from-yellow-400 to-yellow-100 bg-transparent/40 rounded-2xl p-8  transition-colors">
               <div className="w-12 h-12 bg-indigo-600/10 rounded-xl flex items-center justify-center mb-6">
                 <Target className="w-6 h-6 text-indigo-400" />
               </div>
@@ -153,7 +153,7 @@ const About = () => {
                 with their audiences in the digital world.
               </p>
             </div>
-            <div className="bg-gradient-to-l from-gray-500 to-gray-100 bg-transparent/40 rounded-2xl p-8  transition-colors">
+            <div className="bg-gradient-to-l from-yellow-400 to-yellow-100 bg-transparent/40 rounded-2xl p-8  transition-colors">
               <div className="w-12 h-12 bg-indigo-600/10 rounded-xl flex items-center justify-center mb-6">
                 <Users className="w-6 h-6 text-indigo-400" />
               </div>
