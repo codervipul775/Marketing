@@ -151,7 +151,7 @@ const Home = () => {
             </h1>
            
             <p className="text-black text-lg md:text-xl mb-8 max-w-2xl w-15 drop-shadow-xs mx-auto mt-6">
-            Unlock the full potential of influencer marketing and connect with your audience like never before. Drive impact, build trust, and grow your brand effortlessly! 🚀
+            Unlock the full potential of influencer marketing and connect with your audience like never before. Drive impact, build trust, and grow your brand effortlessly! 
             </p>
             </div>
             <img src='https://media-hosting.imagekit.io//f4d7ce963d5e4343/an-isometric-digital-illustration-repres_PMUSlDDlSrmgqJuzvFJlSg_6RlXR3veRdWpHWtyOWgVNw-removebg-preview.png?Expires=1836399204&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=id9prKV3N8UayhfpajV~dQLsMol9ipKwHmmpr8cptolu3HB-ajNxESZX6yc~SwxnYIfiXfTO050jRGd55cbnH0-ULdgU8R9PX77GkDtds8-xIE9YOe13n5NtxkDjlrjOW49CfI8q3Pliw~vh0JLAPCEDxvwqi-8469bXY5cu4pLFe59nqawV4jXnEMNwKYOTXwvkAP4f-9PJ0KK6tsjCWDvFB-rmXqwWnQ7XGQYVGJQZd1BEWZoyuQgtvkuIHBug8YEdgTZe~X1bdtrzNbG9wckchPG3IpKUDU7Ngtwivqg-jYjAAzbWNSkxxWXU5QLidKJFjf1NIdeaUXc7NnOfJA__' alt="Influenz" className="mx-auto w-1/3" />
