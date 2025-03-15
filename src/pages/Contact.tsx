@@ -1,64 +1,69 @@
 import { Mail, Phone, Loader2 } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef<HTMLFormElement>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
-  const validateForm = (data: { name: string; email: string; subject: string; message: string }) => {
+  const validateForm = (data: {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+  }) => {
     if (!data.name || data.name.trim().length < 2) {
-      throw new Error('Please enter a valid name (at least 2 characters)');
+      throw new Error("Please enter a valid name (at least 2 characters)");
     }
     if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-      throw new Error('Please enter a valid email address');
+      throw new Error("Please enter a valid email address");
     }
     if (!data.subject || data.subject.trim().length < 3) {
-      throw new Error('Please enter a subject (at least 3 characters)');
+      throw new Error("Please enter a subject (at least 3 characters)");
     }
     if (!data.message || data.message.trim().length < 10) {
-      throw new Error('Please enter a message (at least 10 characters)');
+      throw new Error("Please enter a message (at least 10 characters)");
     }
   };
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
     setError(null);
     setSuccess(false);
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
+    const formData = new FormData(e.currentTarget);
     const data = {
-      name: formData.get('name') as string,
-      email: formData.get('email') as string,
-      subject: formData.get('subject') as string,
-      message: formData.get('message') as string
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      subject: formData.get("subject") as string,
+      message: formData.get("message") as string
     };
 
     try {
       validateForm(data);
 
-      const API_URL = import.meta.env.VITE_API_URL || 'https://api.influenz.co.in';  // Define API_URL here
-      console.log("API_URL: " + API_URL);
-      const response = await fetch(`${API_URL}/contact`, {
-        credentials: 'omit',
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.error || `Failed to send message: ${response.status}`);
-      }
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current!,
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        }
+      );
 
       setSuccess(true);
-      form.reset();
+      if (form.current) {
+        form.current.reset();
+      }
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to send message. Please try again later.');
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Failed to send message. Please try again later."
+      );
     } finally {
       setIsLoading(false);
     }
@@ -109,6 +114,7 @@ const Contact = () => {
           <div className="lg:col-span-2">
             <div className="bg-white shadow-lg rounded-xl p-8 sm:p-10 border border-gray-200">
               <form
+                ref={form}
                 onSubmit={handleSubmit}
                 className="space-y-8"
                 autoComplete="off"
@@ -176,7 +182,7 @@ const Contact = () => {
                         Sending...
                       </>
                     ) : (
-                      'Send Message'
+                      "Send Message"
                     )}
                   </button>
                 </div>
