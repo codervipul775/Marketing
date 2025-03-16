@@ -142,7 +142,7 @@ const Home = () => {
   return (
     <div className="w-screen">
       {/* Hero Section */}
-      <section className="relative w-screen min-h-[80vh] py-20 bg-gradient-to-r from-white via-white to-yellow-50">
+      <section className="relative w-screen min-h-[80vh] py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex-1 text-left md:max-w-2xl">
