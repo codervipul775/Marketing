@@ -155,7 +155,7 @@ const Home = () => {
             </div>
             <div className="flex-1 relative">
               <img 
-                src='https://media-hosting.imagekit.io//f4d7ce963d5e4343/an-isometric-digital-illustration-repres_PMUSlDDlSrmgqJuzvFJlSg_6RlXR3veRdWpHWtyOWgVNw-removebg-preview.png?Expires=1836399204&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=id9prKV3N8UayhfpajV~dQLsMol9ipKwHmmpr8cptolu3HB-ajNxESZX6yc~SwxnYIfiXfTO050jRGd55cbnH0-ULdgU8R9PX77GkDtds8-xIE9YOe13n5NtxkDjlrjOW49CfI8q3Pliw~vh0JLAPCEDxvwqi-8469bXY5cu4pLFe59nqawV4jXnEMNwKYOTXwvkAP4f-9PJ0KK6tsjCWDvFB-rmXqwWnQ7XGQYVGJQZd1BEWZoyuQgtvkuIHBug8YEdgTZe~X1bdtrzNbG9wckchPG3IpKUDU7Ngtwivqg-jYjAAzbWNSkxxWXU5QLidKJFjf1NIdeaUXc7NnOfJA__' 
+                src='https://media-hosting.imagekit.io//4d891ddf378d466f/vector.png?Expires=1836717236&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=HUUbzxdwqxvBO7dI3YdbKvccQQYa42Tgds4g5zdxhIgj5iq4~YauwwDzXWkTwd4qDctp11RqQW4BcDay6M4mWlkRLes2iLHWjP7j4j6L4~EWvpyi40cTDAws7E2cnomXAJY0wNiVGwbWJVzv0qAgD1ozDt7uEoyPccZPI-c0sia~XUlM29ABUypMt~eP43MOGLU7JtY~I2sfUY0ajjCA4gN5vsxFS3~NsQkEpfN9c~UxCeL9N3jF~vtDZv7k7qdAzU6C~WCXkdg3eJvp9gonEND~0BdHZLe9og7BYz-aIOM2QtNMewWrNQs3j7uq8NZDcqssNuqUHE6AVq4lpHykpg__' 
                 alt="Influenz Marketing" 
                 className="w-full max-w-lg mx-auto transform hover:scale-105 transition-transform duration-300"
               />
