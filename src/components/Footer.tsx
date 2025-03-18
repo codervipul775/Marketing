@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Code2, Linkedin, Twitter } from "lucide-react";
+import { Code2, Linkedin, Instagram } from "lucide-react";
 
 interface FooterProps {
   copyright: string;
