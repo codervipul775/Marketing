@@ -20,7 +20,7 @@ const brands: Brand[] = [
   },
   {
     name: "Face Magazine",
-    industry: "Fashion,Art,Culture,Entertainment",
+    industry: "Fashion,Art and Culture",
     logo: "https://facemagazine.in/wp-content/uploads/2022/11/FACEPrimary-Logo.png"
   },
   {
