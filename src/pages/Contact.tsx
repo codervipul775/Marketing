@@ -14,14 +14,6 @@ const Contact = () => {
     setError(null);
     setSuccess(false);
 
-    const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get("name") as string,
-      email: formData.get("email") as string,
-      subject: formData.get("subject") as string,
-      message: formData.get("message") as string,
-    };
-
     try {
       await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -79,3 +71,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
