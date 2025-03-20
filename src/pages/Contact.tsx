@@ -1,4 +1,3 @@
-You said:
 import { Mail, Phone, Loader2 } from "lucide-react";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -207,7 +206,7 @@ const Contact = () => {
                       Email
                     </h4>
                     <a
-                      href={mailto:partnerships@influenz.co.in}
+                      href="mailto:partnerships@influenz.co.in"
                       className="text-base text-indigo-600 hover:text-indigo-500"
                     >
                       partnerships@influenz.co.in
@@ -239,17 +238,6 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="border-t border-white/10 pt-8">
-                <h4 className="text-base font-medium text-gray-300 mb-4">
-                  Office Hours
-                </h4>
-                <div className="space-y-3 text-base text-gray-400">
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p>Saturday: 10:00 AM - 4:00 PM</p>
-                  <p>Sunday: Closed</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -258,4 +246,5 @@ const Contact = () => {
   );
 };
 
-export default Contact;     remove the office hours part from this
+export default Contact;
+
