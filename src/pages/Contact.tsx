@@ -1,4 +1,4 @@
-import { Mail, Phone, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
