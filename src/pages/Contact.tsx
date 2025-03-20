@@ -1,4 +1,4 @@
-import { Loader2 } from "lucide-react";
+import { Mail, Phone, Loader2 } from "lucide-react";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -189,10 +189,63 @@ const Contact = () => {
               </form>
             </div>
           </div>
+
+          <div className="lg:col-span-1">
+            <div className="bg-white shadow-lg rounded-xl p-8 sm:p-10 space-y-10 border border-gray-200">
+              <h3 className="text-2xl font-semibold text-gray-900">
+                Contact Information
+              </h3>
+
+              <div className="space-y-8">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 mt-1">
+                    <Mail className="h-6 w-6 text-indigo-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-base font-medium text-gray-700 mb-1">
+                      Email
+                    </h4>
+                    <a
+                      href={mailto:partnerships@influenz.co.in}
+                      className="text-base text-indigo-600 hover:text-indigo-500"
+                    >
+                      partnerships@influenz.co.in
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 mt-1">
+                    <Phone className="h-6 w-6 text-indigo-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-base font-medium text-gray-700 mb-1">
+                      Phone
+                    </h4>
+                    <a
+                      href="tel:+919058522239"
+                      className="text-base text-indigo-600 hover:text-indigo-500"
+                    >
+                      +91 90585 22239
+                    </a>
+                    <br />
+                    <a
+                      href="tel:+916239183525"
+                      className="text-base text-indigo-600 hover:text-indigo-500"
+                    >
+                      +91 62391 83525
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Contact;
+export default Contact; 
