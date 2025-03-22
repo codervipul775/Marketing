@@ -11,15 +11,12 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/" className="inline-block">
             <img
-              src="https://media-hosting.imagekit.io//ec84fa2887bd4175/Influenz%20Logo.png?Expires=1837012577&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Dn8rXLG2n2uHvuyVmag7cC4Po70RgnDStbMu2oweeJCahLVMIwgiBbNUvBPhaN3lIhZdDsOUX5jkqFUmB2hXyn6RzayHX7F~PP6QXJJHla5il831PLLQup1bm6WqQeEw6hazbwPvmZW~9oUWn-lVvZqfcFFH1eWTF5Y7BLhVSfD5aLTwrmQZ-ENgyy9c1g2T2UbsbMwEDNinRPgFTWJMxfKKp12OPB2cOZBUIM9JaRvNfhy6ZVp1eZVxVTI-DC9wXg099XpnqTC~im4j0EJXMfYABsCY74bkenoKQvwj3cCcgkvVSjyM6zVI~3twAuncMcUDoSSd4bG7bHOfz2HI0Q__"
-              alt="Influenz Logo"
-              className="h-8" // Adjust size as needed
+              src="/logo.png"
+              alt="Influenz"
+              className="h-8 w-auto object-contain"
             />
-            <span className="text-xl font-bold bg-gradient-to-r from-white to-indigo-300 text-transparent bg-clip-text">
-              Influenz
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
