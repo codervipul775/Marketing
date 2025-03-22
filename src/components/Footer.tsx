@@ -31,16 +31,13 @@ const Footer: React.FC<FooterProps> = () => {
     <footer className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-gray-300">
       <div className="container mx-auto px-4">
         <div className="py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-2">
+          <div className="space-y-6">
+            <Link to="/" className="inline-block">
               <img
-                src="https://media-hosting.imagekit.io//ec84fa2887bd4175/Influenz%20Logo.png?Expires=1837012577&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Dn8rXLG2n2uHvuyVmag7cC4Po70RgnDStbMu2oweeJCahLVMIwgiBbNUvBPhaN3lIhZdDsOUX5jkqFUmB2hXyn6RzayHX7F~PP6QXJJHla5il831PLLQup1bm6WqQeEw6hazbwPvmZW~9oUWn-lVvZqfcFFH1eWTF5Y7BLhVSfD5aLTwrmQZ-ENgyy9c1g2T2UbsbMwEDNinRPgFTWJMxfKKp12OPB2cOZBUIM9JaRvNfhy6ZVp1eZVxVTI-DC9wXg099XpnqTC~im4j0EJXMfYABsCY74bkenoKQvwj3cCcgkvVSjyM6zVI~3twAuncMcUDoSSd4bG7bHOfz2HI0Q__"
-                alt="Influenz Logo"
-                className="h-8" // Adjust size as needed
+                src="/logo.png"
+                alt="Influenz"
+                className="h-12 w-auto object-contain"
               />
-              <span className="text-2xl font-bold bg-gradient-to-r from-white to-indigo-300 text-transparent bg-clip-text">
-                Influenz
-              </span>
             </Link>
             <p className="text-sm text-gray-400">
               Elevate your influence with INFLUENZ.
