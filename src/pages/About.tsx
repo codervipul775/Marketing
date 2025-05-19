@@ -55,7 +55,7 @@ const About = () => {
       name: "Ansh Pushpak",
       role: "Digital Marketing Strategist",
       image:
-        "https://media-hosting.imagekit.io//40143ff12a9d402b/IMG_5745.JPG?Expires=1836386124&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=g10Ui1QqeeZQdo~4T-ViN7FV3xoUtQJ2nbpRsxY9R2bBS0wSWBXbN67S2rdsWTGjARa24rMP9CsHyr1XK7QwrZLjsvRvHqhrOC3ewjGjUWmamQtL-BICe6yj9eMF3L0GGpOMDdEUCmLIAtxJ6AgJas3ISR9QhoYOFDCP-yBRcPtNuEAxwPMzlzYh2msxJppjf3UbycAh2~p~Au81lpypbbGbpeTkVeLj-LVdhkrfZr0yJtuqViu9BPcAw1cosdoQwa0ZKE6Tr2vCPo46CRGv8rrvn7J2YIB9DjKaAyxeSNBplGXGfJC3h4dTFQiU3MLPP~cVLWXMlfpv~Nprm9~bhw__",
+        "https://iziltkracfdoszyngmmd.supabase.co/storage/v1/object/public/dropbox/files/mgserd",
       mini_bio:
         "5+ years of experience in social media growth, influencer marketing, and content creation.",
       detailed_bio:
@@ -85,7 +85,7 @@ const About = () => {
     {
       name: "Gourav",
       role: "Marketing Geek",
-      image: "https://media-hosting.imagekit.io//84e2d94e67904036/Gourav.jpg?Expires=1836386255&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=iopu8qPB6Nhot7OzQfjNb8qhdA1gtCophLXL9DDc3ZXyuXi7B4GpXOlb2V02YndSUz~1sUxhs9aj7nlF4dKebmeUOi7rsT182Cs2usWTasEhT3eAjZctwhEYjvt05VnJDYlFqBjmsi1ibnbrA9aTcydiOyKStWdowm-F2PhziPzSAlw27ZVG6Xt6cTA-8Amo5q29qSxluryiXEc672SBhxe6c073q4DvzoTzhBxqKdp9Fqesx4I4L1GlS8P5ipbk3pMzf23swAYGPGiBN1ooUljwkVRcPFNVScMCB3RhZV919BDMK0d7R6poMq2td3412To~sU1LMTrR8FqSc2g8jQ__",
+      image: "https://iziltkracfdoszyngmmd.supabase.co/storage/v1/object/public/dropbox/files/2gpyg2",
       mini_bio:
         "Expertise in brand partnerships, digital engagement, and campaign execution.",
       detailed_bio:
