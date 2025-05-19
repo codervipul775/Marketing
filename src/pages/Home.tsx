@@ -155,7 +155,7 @@ const Home = () => {
             </div>
             <div className="flex-1 relative">
               <img 
-                src='https://media-hosting.imagekit.io//4d891ddf378d466f/vector.png?Expires=1836717236&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=HUUbzxdwqxvBO7dI3YdbKvccQQYa42Tgds4g5zdxhIgj5iq4~YauwwDzXWkTwd4qDctp11RqQW4BcDay6M4mWlkRLes2iLHWjP7j4j6L4~EWvpyi40cTDAws7E2cnomXAJY0wNiVGwbWJVzv0qAgD1ozDt7uEoyPccZPI-c0sia~XUlM29ABUypMt~eP43MOGLU7JtY~I2sfUY0ajjCA4gN5vsxFS3~NsQkEpfN9c~UxCeL9N3jF~vtDZv7k7qdAzU6C~WCXkdg3eJvp9gonEND~0BdHZLe9og7BYz-aIOM2QtNMewWrNQs3j7uq8NZDcqssNuqUHE6AVq4lpHykpg__' 
+                src='https://iziltkracfdoszyngmmd.supabase.co/storage/v1/object/public/dropbox/files/rl83j9' 
                 alt="Influenz Marketing" 
                 className="w-full max-w-lg mx-auto transform hover:scale-105 transition-transform duration-300"
               />
